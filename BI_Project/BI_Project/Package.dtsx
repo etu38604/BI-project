@@ -11,8 +11,8 @@
   DTS:LocaleID="2060"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{03AA0CA6-A97C-48A6-A2C8-DF0D47EF2621}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{1F5D35A2-D4CF-4642-808B-1B771CD5C055}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,7 +23,7 @@
       DTS:ObjectName="Gestionnaire de connexions Excel">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Cours\B3\Business\Labo Scholtes\PROJET\zipcodes_num_fr.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Cours\B3\Business\Labo Scholtes\PROJET\zipcodes_num_fr.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -37,7 +37,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6Rl/kUM2oE2O/CgcvdKEVAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABpn5flTmSwpPzXtNARcQQpLLv2JE9xYXQu0ByE19/nlwAAAAAOgAAAAAIAACAAAADjx35GVo0skbsUxYNPbuQ62Sr6tPYCjwxsqw1IVHHwvSAAAADTpAherjO+3ArLkbBxw+3IhpegQ+ojNT3ciY7XR2NPuEAAAAA87ucFsmZ/Ul6Ksd3uV6hXSeiu6lBqLPzUfnwSQXweTv0SsN74qgEYRNVDWkzoRRAVkHr+zR1FuMfnLtH7Vfz+</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAXWZtJr+GWECuMYAw/T3oGQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABaCh/S8pbs0K3y9ou2M0PbIuTSQEt6j8OW8HcoKL+BLQAAAAAOgAAAAAIAACAAAABVXMsj7XDOBnWa6LHOC9y7pMjydHxOI6v8X0ifkUxy3yAAAAAil7fjldEghJdBUHIuPdlBZQAVeue/8ADuxKZAYOsDLUAAAAAHSebSxbPbOQwd6GKWn9Mb5IYH6xC9O0vGURyqOSuh3HYW+xS1bb4jICFi/bydRqMk4db2MMyAIqBExq7dr+6+</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -52,7 +52,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6Rl/kUM2oE2O/CgcvdKEVAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABCd39nV2BFzXW274By31aLBFhw8rN04t7hNHNOJXr1FgAAAAAOgAAAAAIAACAAAACbfGd0Br7StQc6ySsMGqBFngtOvAMa7m3rfaUEHBxZFCAAAAAt6sNejnt3cutaRti0wz2QoG3Atrw6mR0ptcYzTJynLUAAAABOXkoQUqJKnGF1LsAM9omsbY/Y2aIQKU4yweMwoWtbNLsr5J8q+CzQKtSvgFNuTfqnraYW9UcCQcp1axEfppUP</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAXWZtJr+GWECuMYAw/T3oGQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACkxjF7Gsm8+fNq3lGFFKkgA7WY4YjPzg7y3OXMyKsY0AAAAAAOgAAAAAIAACAAAAA0ihGP9e676e8o/BXP76vivXtSFHBxhNd+9LkvicsBKSAAAACQj2OFiwAnZfoAuhTe47IFyr3xZCkg/MeRATV7S5ZL3UAAAABwqoF7gmteKMOt4EPxsGpe0dHjpZ4xOzJZu5kQQBNTkPn+xfcTEVCeXR9Pz7hu4iRJzuWFINer2CWvUBJGwwr2</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -105,7 +105,7 @@
                 <property
                   dataType="System.String"
                   description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
-                  name="OpenRowset"></property>
+                  name="OpenRowset">[dbo].[Customer]</property>
                 <property
                   dataType="System.String"
                   description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
@@ -149,14 +149,215 @@
                 <output
                   refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB]"
                   name="Sortie de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Id]"
+                      lineageId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[LastName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[LastName]"
+                      length="50"
+                      lineageId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[LastName]"
+                      name="LastName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[FirstName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[FirstName]"
+                      length="50"
+                      lineageId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[FirstName]"
+                      name="FirstName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[StreetAndNumber]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[StreetAndNumber]"
+                      length="255"
+                      lineageId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[StreetAndNumber]"
+                      name="StreetAndNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[PostalCode]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[PostalCode]"
+                      lineageId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[PostalCode]"
+                      name="PostalCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[CityName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[CityName]"
+                      length="255"
+                      lineageId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[CityName]"
+                      name="CityName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[MaritalStatusId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[MaritalStatusId]"
+                      lineageId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[MaritalStatusId]"
+                      name="MaritalStatusId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[HouseholdSize]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[HouseholdSize]"
+                      lineageId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[HouseholdSize]"
+                      name="HouseholdSize"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[LoyaltyCardNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[LoyaltyCardNumber]"
+                      length="10"
+                      lineageId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[LoyaltyCardNumber]"
+                      name="LoyaltyCardNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[LoyaltyCardCreationDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[LoyaltyCardCreationDate]"
+                      lineageId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[LoyaltyCardCreationDate]"
+                      name="LoyaltyCardCreationDate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
                   <externalMetadataColumns
-                    isUsed="True" />
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[LastName]"
+                      dataType="wstr"
+                      length="50"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[FirstName]"
+                      dataType="wstr"
+                      length="50"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[StreetAndNumber]"
+                      dataType="wstr"
+                      length="255"
+                      name="StreetAndNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[PostalCode]"
+                      dataType="i4"
+                      name="PostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[CityName]"
+                      dataType="wstr"
+                      length="255"
+                      name="CityName" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[MaritalStatusId]"
+                      dataType="i4"
+                      name="MaritalStatusId" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[HouseholdSize]"
+                      dataType="i4"
+                      name="HouseholdSize" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[LoyaltyCardNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="LoyaltyCardNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[LoyaltyCardCreationDate]"
+                      dataType="dbTimeStamp"
+                      name="LoyaltyCardCreationDate" />
+                  </externalMetadataColumns>
                 </output>
                 <output
                   refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB]"
                   isErrorOut="true"
                   name="Sortie d'erreur de source OLE DB">
                   <outputColumns>
+                    <outputColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Id]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[LastName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[LastName]"
+                      name="LastName" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[FirstName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[FirstName]"
+                      name="FirstName" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[StreetAndNumber]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[StreetAndNumber]"
+                      name="StreetAndNumber" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[PostalCode]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[PostalCode]"
+                      name="PostalCode" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[CityName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[CityName]"
+                      name="CityName" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[MaritalStatusId]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[MaritalStatusId]"
+                      name="MaritalStatusId" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[HouseholdSize]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[HouseholdSize]"
+                      name="HouseholdSize" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[LoyaltyCardNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[LoyaltyCardNumber]"
+                      name="LoyaltyCardNumber" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[LoyaltyCardCreationDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[LoyaltyCardCreationDate]"
+                      name="LoyaltyCardCreationDate" />
                     <outputColumn
                       refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
                       dataType="i4"
@@ -1161,7 +1362,7 @@ SELECT * FROM @DimDate</property>
                 <property
                   dataType="System.String"
                   description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
-                  name="OpenRowset"></property>
+                  name="OpenRowset">[dbo].[Product]</property>
                 <property
                   dataType="System.String"
                   description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
@@ -1205,14 +1406,185 @@ SELECT * FROM @DimDate</property>
                 <output
                   refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB]"
                   name="Sortie de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Id]"
+                      lineageId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[CategoryId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[CategoryId]"
+                      lineageId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[CategoryId]"
+                      name="CategoryId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[FrenchName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[FrenchName]"
+                      length="50"
+                      lineageId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[FrenchName]"
+                      name="FrenchName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[DutchName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[DutchName]"
+                      length="50"
+                      lineageId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[DutchName]"
+                      name="DutchName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[GermanName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[GermanName]"
+                      length="50"
+                      lineageId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[GermanName]"
+                      name="GermanName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[EnglishName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishName]"
+                      length="50"
+                      lineageId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[EnglishName]"
+                      name="EnglishName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[UnitPriceExcludingVAT]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[UnitPriceExcludingVAT]"
+                      lineageId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[UnitPriceExcludingVAT]"
+                      name="UnitPriceExcludingVAT"
+                      precision="5"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[VATRate]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[VATRate]"
+                      lineageId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[VATRate]"
+                      name="VATRate"
+                      precision="5"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
                   <externalMetadataColumns
-                    isUsed="True" />
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[CategoryId]"
+                      dataType="i4"
+                      name="CategoryId" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[FrenchName]"
+                      dataType="wstr"
+                      length="50"
+                      name="FrenchName" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[DutchName]"
+                      dataType="wstr"
+                      length="50"
+                      name="DutchName" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[GermanName]"
+                      dataType="wstr"
+                      length="50"
+                      name="GermanName" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishName]"
+                      dataType="wstr"
+                      length="50"
+                      name="EnglishName" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[UnitPriceExcludingVAT]"
+                      dataType="numeric"
+                      name="UnitPriceExcludingVAT"
+                      precision="5"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[VATRate]"
+                      dataType="numeric"
+                      name="VATRate"
+                      precision="5"
+                      scale="2" />
+                  </externalMetadataColumns>
                 </output>
                 <output
                   refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB]"
                   isErrorOut="true"
                   name="Sortie d'erreur de source OLE DB">
                   <outputColumns>
+                    <outputColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Id]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[CategoryId]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[CategoryId]"
+                      name="CategoryId" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[FrenchName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[FrenchName]"
+                      name="FrenchName" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[DutchName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[DutchName]"
+                      name="DutchName" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[GermanName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[GermanName]"
+                      name="GermanName" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishName]"
+                      name="EnglishName" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[UnitPriceExcludingVAT]"
+                      dataType="numeric"
+                      lineageId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[UnitPriceExcludingVAT]"
+                      name="UnitPriceExcludingVAT"
+                      precision="5"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[VATRate]"
+                      dataType="numeric"
+                      lineageId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[VATRate]"
+                      name="VATRate"
+                      precision="5"
+                      scale="2" />
                     <outputColumn
                       refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
                       dataType="i4"
@@ -1264,7 +1636,7 @@ SELECT * FROM @DimDate</property>
                 <property
                   dataType="System.String"
                   description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
-                  name="OpenRowset"></property>
+                  name="OpenRowset">[dbo].[Store]</property>
                 <property
                   dataType="System.String"
                   description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
@@ -1308,14 +1680,119 @@ SELECT * FROM @DimDate</property>
                 <output
                   refId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie de source OLE DB]"
                   name="Sortie de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Id]"
+                      lineageId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Name]"
+                      length="50"
+                      lineageId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[StreetAndNumber]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[StreetAndNumber]"
+                      length="255"
+                      lineageId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[StreetAndNumber]"
+                      name="StreetAndNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[LocalityId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[LocalityId]"
+                      lineageId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[LocalityId]"
+                      name="LocalityId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[SalesAreaSquareMeters]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[SalesAreaSquareMeters]"
+                      lineageId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[SalesAreaSquareMeters]"
+                      name="SalesAreaSquareMeters"
+                      precision="5"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
                   <externalMetadataColumns
-                    isUsed="True" />
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[StreetAndNumber]"
+                      dataType="wstr"
+                      length="255"
+                      name="StreetAndNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[LocalityId]"
+                      dataType="i4"
+                      name="LocalityId" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[SalesAreaSquareMeters]"
+                      dataType="numeric"
+                      name="SalesAreaSquareMeters"
+                      precision="5"
+                      scale="2" />
+                  </externalMetadataColumns>
                 </output>
                 <output
                   refId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB]"
                   isErrorOut="true"
                   name="Sortie d'erreur de source OLE DB">
                   <outputColumns>
+                    <outputColumn
+                      refId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Id]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Name]"
+                      name="Name" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[StreetAndNumber]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[StreetAndNumber]"
+                      name="StreetAndNumber" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[LocalityId]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[LocalityId]"
+                      name="LocalityId" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[SalesAreaSquareMeters]"
+                      dataType="numeric"
+                      lineageId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[SalesAreaSquareMeters]"
+                      name="SalesAreaSquareMeters"
+                      precision="5"
+                      scale="2" />
                     <outputColumn
                       refId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
                       dataType="i4"
@@ -1695,29 +2172,29 @@ SELECT * FROM @DimDate</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="196,42"
-          Id="Package\Remplissage de DimDate"
-          TopLeft="42,174" />
-        <NodeLayout
           Size="228,42"
           Id="Package\Remise à zéro de la Warehouse"
           TopLeft="393,13" />
-        <NodeLayout
-          Size="199,42"
-          Id="Package\Remplissage de DimStore"
-          TopLeft="280,172" />
-        <NodeLayout
-          Size="210,42"
-          Id="Package\Remplissage de DimProduct"
-          TopLeft="535,177" />
         <NodeLayout
           Size="219,42"
           Id="Package\Remplissage de DimCustomer"
           TopLeft="799,174" />
         <NodeLayout
+          Size="196,42"
+          Id="Package\Remplissage de DimDate"
+          TopLeft="42,174" />
+        <NodeLayout
+          Size="210,42"
+          Id="Package\Remplissage de DimProduct"
+          TopLeft="535,177" />
+        <NodeLayout
+          Size="199,42"
+          Id="Package\Remplissage de DimStore"
+          TopLeft="280,172" />
+        <NodeLayout
           Size="175,42"
           Id="Package\Remplissage de Fact"
-          TopLeft="424,382" />
+          TopLeft="424,381" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Contrainte]"
           TopLeft="441,55">
@@ -1860,26 +2337,26 @@ SELECT * FROM @DimDate</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="321.4,166"
+              EndConnector="321.4,165"
               Start="0,0"
-              End="321.4,158.5">
+              End="321.4,157.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,112.293034427542" />
+                    End="0,111.592473979183" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,112.293034427542"
-                    Point2="0,116.293034427542"
-                    Point3="4,116.293034427542" />
+                    Point1="0,111.592473979183"
+                    Point2="0,115.592473979183"
+                    Point3="4,115.592473979183" />
                   <mssgle:LineSegment
-                    End="317.4,116.293034427542" />
+                    End="317.4,115.592473979183" />
                   <mssgle:CubicBezierSegment
-                    Point1="317.4,116.293034427542"
-                    Point2="321.4,116.293034427542"
-                    Point3="321.4,120.293034427542" />
+                    Point1="317.4,115.592473979183"
+                    Point2="321.4,115.592473979183"
+                    Point3="321.4,119.592473979183" />
                   <mssgle:LineSegment
-                    End="321.4,158.5" />
+                    End="321.4,157.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1894,26 +2371,26 @@ SELECT * FROM @DimDate</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="115.3,168"
+              EndConnector="115.3,167"
               Start="0,0"
-              End="115.3,160.5">
+              End="115.3,159.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,88.8616550852811" />
+                    End="0,88.3089071383449" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,88.8616550852811"
-                    Point2="0,92.8616550852811"
-                    Point3="4,92.8616550852811" />
+                    Point1="0,88.3089071383449"
+                    Point2="0,92.3089071383449"
+                    Point3="4,92.3089071383449" />
                   <mssgle:LineSegment
-                    End="111.3,92.8616550852811" />
+                    End="111.3,92.3089071383449" />
                   <mssgle:CubicBezierSegment
-                    Point1="111.3,92.8616550852811"
-                    Point2="115.3,92.8616550852811"
-                    Point3="115.3,96.8616550852811" />
+                    Point1="111.3,92.3089071383449"
+                    Point2="115.3,92.3089071383449"
+                    Point3="115.3,96.3089071383449" />
                   <mssgle:LineSegment
-                    End="115.3,160.5" />
+                    End="115.3,159.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1928,26 +2405,26 @@ SELECT * FROM @DimDate</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-111.8,163"
+              EndConnector="-111.8,162"
               Start="0,0"
-              End="-111.8,155.5">
+              End="-111.8,154.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,86.0979153506001" />
+                    End="0,85.545167403664" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,86.0979153506001"
-                    Point2="0,90.0979153506001"
-                    Point3="-4,90.0979153506001" />
+                    Point1="0,85.545167403664"
+                    Point2="0,89.545167403664"
+                    Point3="-4,89.545167403664" />
                   <mssgle:LineSegment
-                    End="-107.8,90.0979153506001" />
+                    End="-107.8,89.545167403664" />
                   <mssgle:CubicBezierSegment
-                    Point1="-107.8,90.0979153506001"
-                    Point2="-111.8,90.0979153506001"
-                    Point3="-111.8,94.0979153506001" />
+                    Point1="-107.8,89.545167403664"
+                    Point2="-111.8,89.545167403664"
+                    Point3="-111.8,93.545167403664" />
                   <mssgle:LineSegment
-                    End="-111.8,155.5" />
+                    End="-111.8,154.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1962,26 +2439,26 @@ SELECT * FROM @DimDate</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-346.9,166"
+              EndConnector="-346.9,165"
               Start="0,0"
-              End="-346.9,158.5">
+              End="-346.9,157.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,112.293034427542" />
+                    End="0,111.592473979183" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,112.293034427542"
-                    Point2="0,116.293034427542"
-                    Point3="-4,116.293034427542" />
+                    Point1="0,111.592473979183"
+                    Point2="0,115.592473979183"
+                    Point3="-4,115.592473979183" />
                   <mssgle:LineSegment
-                    End="-342.9,116.293034427542" />
+                    End="-342.9,115.592473979183" />
                   <mssgle:CubicBezierSegment
-                    Point1="-342.9,116.293034427542"
-                    Point2="-346.9,116.293034427542"
-                    Point3="-346.9,120.293034427542" />
+                    Point1="-342.9,115.592473979183"
+                    Point2="-346.9,115.592473979183"
+                    Point3="-346.9,119.592473979183" />
                   <mssgle:LineSegment
-                    End="-346.9,158.5" />
+                    End="-346.9,157.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1993,6 +2470,31 @@ SELECT * FROM @DimDate</property>
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <TaskHost
+    design-time-name="Package\Remplissage de DimCustomer">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Remplissage de DimCustomer\Source OLE DB"
+          TopLeft="364,57" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Remplissage de DimCustomer\Source OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Remplissage de DimDate">
     <LayoutInfo>
@@ -2031,62 +2533,6 @@ SELECT * FROM @DimDate</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <TaskHost
-    design-time-name="Package\Remplissage de DimStore">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\Remplissage de DimStore\Source OLE DB"
-          TopLeft="364,57" />
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Remplissage de DimProduct">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\Remplissage de DimProduct\Source OLE DB"
-          TopLeft="364,57" />
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Remplissage de DimCustomer">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\Remplissage de DimCustomer\Source OLE DB"
-          TopLeft="364,57" />
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Remplissage de Fact">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Remplissage de Fact\Destination OLE DB"
-          TopLeft="349,784" />
-        <NodeLayout
-          Size="139,42"
-          Id="Package\Remplissage de Fact\Source Excel"
-          TopLeft="784,510" />
-        <NodeLayout
-          Size="150,42"
-          Id="Package\Remplissage de Fact\Source OLE DB"
-          TopLeft="364,57" />
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Remplissage de DimDate\Destination OLE DB">
     <Properties>
@@ -2108,5 +2554,75 @@ SELECT * FROM @DimDate</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Remplissage de DimProduct">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Remplissage de DimProduct\Source OLE DB"
+          TopLeft="364,57" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Remplissage de DimProduct\Source OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Remplissage de DimStore">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Remplissage de DimStore\Source OLE DB"
+          TopLeft="364,57" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Remplissage de DimStore\Source OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Remplissage de Fact">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Remplissage de Fact\Source Excel"
+          TopLeft="784,510" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Remplissage de Fact\Source OLE DB"
+          TopLeft="364,57" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Remplissage de Fact\Destination OLE DB"
+          TopLeft="349,784" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
