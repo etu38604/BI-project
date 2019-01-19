@@ -1,0 +1,2112 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/19/2019 5:36:22 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="PC-PH-TOUR"
+  DTS:CreatorName="PC-PH-TOUR\Pierre-Henri"
+  DTS:DTSID="{5E901A8C-D64B-46FB-81DE-9D0A9709D16A}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.0900.40"
+  DTS:LocaleID="2060"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{03AA0CA6-A97C-48A6-A2C8-DF0D47EF2621}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestionnaire de connexions Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{1AA16E86-103F-4206-9145-9C940E61AC64}"
+      DTS:ObjectName="Gestionnaire de connexions Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Cours\B3\Business\Labo Scholtes\PROJET\zipcodes_num_fr.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[vm-sql2.iesn.be\Stu3IG.BIProject_OLTP.1819_etu35397]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{8B4BEB55-9971-4BA0-A879-1A7355E35119}"
+      DTS:ObjectName="vm-sql2.iesn.be\Stu3IG.BIProject_OLTP.1819_etu35397">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=vm-sql2.iesn.be\Stu3IG;User ID=1819_etu35397;Initial Catalog=BIProject_OLTP;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6Rl/kUM2oE2O/CgcvdKEVAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABpn5flTmSwpPzXtNARcQQpLLv2JE9xYXQu0ByE19/nlwAAAAAOgAAAAAIAACAAAADjx35GVo0skbsUxYNPbuQ62Sr6tPYCjwxsqw1IVHHwvSAAAADTpAherjO+3ArLkbBxw+3IhpegQ+ojNT3ciY7XR2NPuEAAAAA87ucFsmZ/Ul6Ksd3uV6hXSeiu6lBqLPzUfnwSQXweTv0SsN74qgEYRNVDWkzoRRAVkHr+zR1FuMfnLtH7Vfz+</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[vm-sql2.iesn.be\Stu3IG\1819_etu35397_DB.1819_etu35397]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{8BB5F1BA-64F8-4FD8-BE89-3E3D263260A7}"
+      DTS:ObjectName="vm-sql2.iesn.be\Stu3IG\1819_etu35397_DB.1819_etu35397">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=vm-sql2.iesn.be\Stu3IG;User ID=1819_etu35397;Initial Catalog=1819_etu35397_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6Rl/kUM2oE2O/CgcvdKEVAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABCd39nV2BFzXW274By31aLBFhw8rN04t7hNHNOJXr1FgAAAAAOgAAAAAIAACAAAACbfGd0Br7StQc6ySsMGqBFngtOvAMa7m3rfaUEHBxZFCAAAAAt6sNejnt3cutaRti0wz2QoG3Atrw6mR0ptcYzTJynLUAAAABOXkoQUqJKnGF1LsAM9omsbY/Y2aIQKU4yweMwoWtbNLsr5J8q+CzQKtSvgFNuTfqnraYW9UcCQcp1axEfppUP</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Remise à zéro de la Warehouse"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
+      DTS:DTSID="{467BD1B9-D95A-4440-A6A8-8D7ABD51127F}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Remise à zéro de la Warehouse"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{8BB5F1BA-64F8-4FD8-BE89-3E3D263260A7}"
+          SQLTask:SqlStatementSource="DELETE FROM DimProduct;&#xA;DELETE  FROM DimCustomer;&#xA;DELETE  FROM DimStore;&#xA;DELETE  FROM DimDate;&#xA;DELETE  FROM Fact;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Remplissage de DimCustomer"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{d99cb09e-5a59-411b-ad24-063f0468645f}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Remplissage de DimCustomer"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Remplissage de DimCustomer\Source OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Source OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;7"
+              description="Source OLE DB"
+              name="Source OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable contenant la commande SQL à exécuter."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mappages entre les paramètres de la commande SQL et les variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Remplissage de DimCustomer\Source OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[vm-sql2.iesn.be\Stu3IG.BIProject_OLTP.1819_etu35397]"
+                  connectionManagerRefId="Package.ConnectionManagers[vm-sql2.iesn.be\Stu3IG.BIProject_OLTP.1819_etu35397]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie de source OLE DB]"
+                  name="Sortie de source OLE DB">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </output>
+                <output
+                  refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimCustomer\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Remplissage de DimDate"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{41A56112-5316-4899-8852-9A233ED60DCB}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Remplissage de DimDate"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Remplissage de DimDate\Destination OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Destination OLE DB"
+              name="Destination OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[dbo].[DimDate]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Remplissage de DimDate\Destination OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[vm-sql2.iesn.be\Stu3IG\1819_etu35397_DB.1819_etu35397]"
+                  connectionManagerRefId="Package.ConnectionManagers[vm-sql2.iesn.be\Stu3IG\1819_etu35397_DB.1819_etu35397]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Id]"
+                      cachedDataType="i4"
+                      cachedName="Id"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Id]"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Id]" />
+                    <inputColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[FullDate]"
+                      cachedDataType="dbDate"
+                      cachedName="FullDate"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[FullDate]"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[FullDate]" />
+                    <inputColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[DayNumberOfWeek]"
+                      cachedDataType="i4"
+                      cachedName="DayNumberOfWeek"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[DayNumberOfWeek]"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[DayNumberOfWeek]" />
+                    <inputColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[DayNumberOfMonth]"
+                      cachedDataType="i4"
+                      cachedName="DayNumberOfMonth"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[DayNumberOfMonth]"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[DayNumberOfMonth]" />
+                    <inputColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[DayNumberOfYear]"
+                      cachedDataType="i4"
+                      cachedName="DayNumberOfYear"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[DayNumberOfYear]"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[DayNumberOfYear]" />
+                    <inputColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[MonthNumberOfYear]"
+                      cachedDataType="i4"
+                      cachedName="MonthNumberOfYear"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[MonthNumberOfYear]"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[MonthNumberOfYear]" />
+                    <inputColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Year]"
+                      cachedDataType="i4"
+                      cachedName="Year"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Year]"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Year]" />
+                    <inputColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[FrenchNameDayOfWeek]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="FrenchNameDayOfWeek"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[FrenchNameDayOfWeek]"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[FrenchNameDayOfWeek]" />
+                    <inputColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[DutchNameDayOfWeek]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DutchNameDayOfWeek"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[DutchNameDayOfWeek]"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[DutchNameDayOfWeek]" />
+                    <inputColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[GermanNameDayOfWeek]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="GermanNameDayOfWeek"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[GermanNameDayOfWeek]"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[GermanNameDayOfWeek]" />
+                    <inputColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[EnglishNameDayOfWeek]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="EnglishNameDayOfWeek"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishNameDayOfWeek]"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[EnglishNameDayOfWeek]" />
+                    <inputColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[FrenchMonthName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="FrenchMonthName"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[FrenchMonthName]"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[FrenchMonthName]" />
+                    <inputColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[DutchMonthName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DutchMonthName"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[DutchMonthName]"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[DutchMonthName]" />
+                    <inputColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[GermanMonthName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="GermanMonthName"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[GermanMonthName]"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[GermanMonthName]" />
+                    <inputColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[EnglishMonthName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="EnglishMonthName"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishMonthName]"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[EnglishMonthName]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[FullDate]"
+                      dataType="dbDate"
+                      name="FullDate" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[DayNumberOfWeek]"
+                      dataType="i4"
+                      name="DayNumberOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[DayNumberOfMonth]"
+                      dataType="i4"
+                      name="DayNumberOfMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[DayNumberOfYear]"
+                      dataType="i4"
+                      name="DayNumberOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[MonthNumberOfYear]"
+                      dataType="i4"
+                      name="MonthNumberOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Year]"
+                      dataType="i4"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[FrenchNameDayOfWeek]"
+                      dataType="wstr"
+                      length="50"
+                      name="FrenchNameDayOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[DutchNameDayOfWeek]"
+                      dataType="wstr"
+                      length="50"
+                      name="DutchNameDayOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[GermanNameDayOfWeek]"
+                      dataType="wstr"
+                      length="50"
+                      name="GermanNameDayOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishNameDayOfWeek]"
+                      dataType="wstr"
+                      length="50"
+                      name="EnglishNameDayOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[FrenchMonthName]"
+                      dataType="wstr"
+                      length="50"
+                      name="FrenchMonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[DutchMonthName]"
+                      dataType="wstr"
+                      length="50"
+                      name="DutchMonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[GermanMonthName]"
+                      dataType="wstr"
+                      length="50"
+                      name="GermanMonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishMonthName]"
+                      dataType="wstr"
+                      length="50"
+                      name="EnglishMonthName" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Remplissage de DimDate\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination OLE DB"
+                  synchronousInputId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimDate\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimDate\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Remplissage de DimDate\Source OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Source OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;7"
+              description="Source OLE DB"
+              name="Source OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">/********************************************************************************************/
+--Specify Start Date and End date here
+--Value of Start Date Must be Less than Your End Date 
+
+DECLARE @StartDate DATETIME = '01/01/1990' --Starting value of Date Range
+DECLARE @EndDate DATETIME = '01/01/2020' --End Value of Date Range
+
+--Temporary Variables To Hold the Values During Processing of Each Date of Year
+DECLARE
+    @DayOfWeekInMonth INT,
+    @DayOfWeekInYear INT,
+    @WeekOfMonth INT,
+    @CurrentYear INT,
+    @CurrentMonth INT
+
+DECLARE @DimDate TABLE (
+    Id int primary key,
+    FullDate date NOT NULL,
+    DayNumberOfWeek int NOT NULL,
+    DayNumberOfMonth int NOT NULL,
+    DayNumberOfYear int NOT NULL,
+    MonthNumberOfYear int NOT NULL,
+    Year int NOT NULL,
+    FrenchNameDayOfWeek nvarchar(50) NOT NULL,
+    DutchNameDayOfWeek nvarchar(50) NOT NULL,
+    GermanNameDayOfWeek nvarchar(50) NOT NULL,
+    EnglishNameDayOfWeek nvarchar(50) NOT NULL,
+    FrenchMonthName nvarchar(50) NOT NULL,
+    DutchMonthName nvarchar(50) NOT NULL,
+    GermanMonthName nvarchar(50) NOT NULL,
+    EnglishMonthName nvarchar(50) NOT NULL
+)
+
+/*Table Data type to store the day of week count for the month and year*/
+DECLARE @DayOfWeek TABLE (DOW INT, MonthCount INT, YearCount INT)
+
+INSERT INTO @DayOfWeek VALUES (1, 0, 0)
+INSERT INTO @DayOfWeek VALUES (2, 0, 0)
+INSERT INTO @DayOfWeek VALUES (3, 0, 0)
+INSERT INTO @DayOfWeek VALUES (4, 0, 0)
+INSERT INTO @DayOfWeek VALUES (5, 0, 0)
+INSERT INTO @DayOfWeek VALUES (6, 0, 0)
+INSERT INTO @DayOfWeek VALUES (7, 0, 0)
+
+--Extract and assign various parts of Values from Current Date to Variable
+
+DECLARE @CurrentDate AS DATETIME = @StartDate
+SET @CurrentMonth = DATEPART(MM, @CurrentDate)
+SET @CurrentYear = DATEPART(YY, @CurrentDate)
+
+/********************************************************************************************/
+--Proceed only if Start Date(Current date ) is less than End date you specified above
+
+WHILE @CurrentDate &lt; @EndDate
+BEGIN
+ 
+/*Begin day of week logic*/
+
+         /*Check for Change in Month of the Current date if Month changed then 
+          Change variable value*/
+    IF @CurrentMonth != DATEPART(MM, @CurrentDate) 
+    BEGIN
+        UPDATE @DayOfWeek
+        SET MonthCount = 0
+        SET @CurrentMonth = DATEPART(MM, @CurrentDate)
+    END
+       
+        /* Check for Change in Year of the Current date if Year changed then change 
+         Variable value*/
+    IF @CurrentYear != DATEPART(YY, @CurrentDate)
+    BEGIN
+        UPDATE @DayOfWeek
+        SET YearCount = 0
+        SET @CurrentYear = DATEPART(YY, @CurrentDate)
+    END
+    
+        -- Set values in table data type created above from variables 
+
+    UPDATE @DayOfWeek
+    SET 
+        MonthCount = MonthCount + 1,
+        YearCount = YearCount + 1
+    WHERE DOW = DATEPART(DW, @CurrentDate)
+
+    SELECT
+        @DayOfWeekInMonth = MonthCount,
+        @DayOfWeekInYear = YearCount
+    FROM @DayOfWeek
+    WHERE DOW = DATEPART(DW, @CurrentDate)
+    
+/*End day of week logic*/
+
+
+/* Populate Your Dimension Table with values*/
+    
+    INSERT INTO @DimDate
+    SELECT
+        CONVERT (char(8),@CurrentDate,112) as Id,
+        @CurrentDate AS FullDate,
+        DATEPART(DW, @CurrentDate) AS DayNumberOfWeek,
+        DATEPART(DD, @CurrentDate) AS DayOfMonth,
+        DATEPART(DY,@CurrentDate) AS DayNumberOfYear,
+        DATEPART(MM, @CurrentDate) AS MonthNumberOfYear,
+        DATEPART(YEAR, @CurrentDate) AS Year,
+        CASE
+            WHEN DATEPART(DW, @CurrentDate) = 1
+            THEN 'Lundi'
+            WHEN DATEPART(DW, @CurrentDate) = 2
+            THEN 'Mardi'
+            WHEN DATEPART(DW, @CurrentDate) = 3
+            THEN 'Mercredi'
+            WHEN DATEPART(DW, @CurrentDate) = 4
+            THEN 'Jeudi'
+            WHEN DATEPART(DW, @CurrentDate) = 5
+            THEN 'Vendredi'
+            WHEN DATEPART(DW, @CurrentDate) = 6
+            THEN 'Samedi'
+            WHEN DATEPART(DW, @CurrentDate) = 7
+            THEN 'Dimanche'
+        END AS FrenchNameDayOfWeek,
+        CASE
+            WHEN DATEPART(DW, @CurrentDate) = 1
+            THEN 'Maandag'
+            WHEN DATEPART(DW, @CurrentDate) = 2
+            THEN 'Dinsdag'
+            WHEN DATEPART(DW, @CurrentDate) = 3
+            THEN 'Woensdag'
+            WHEN DATEPART(DW, @CurrentDate) = 4
+            THEN ' Donderdag'
+            WHEN DATEPART(DW, @CurrentDate) = 5
+            THEN 'Vrijdag'
+            WHEN DATEPART(DW, @CurrentDate) = 6
+            THEN 'Zaterdag'
+            WHEN DATEPART(DW, @CurrentDate) = 7
+            THEN 'Zondag'
+        END AS DutchNameDayOfWeek,
+        CASE
+            WHEN DATEPART(DW, @CurrentDate) = 1
+            THEN 'Montag'
+            WHEN DATEPART(DW, @CurrentDate) = 2
+            THEN 'Dienstag'
+            WHEN DATEPART(DW, @CurrentDate) = 3
+            THEN 'Mittwoch'
+            WHEN DATEPART(DW, @CurrentDate) = 4
+            THEN 'Donnerstag'
+            WHEN DATEPART(DW, @CurrentDate) = 5
+            THEN 'Freitag'
+            WHEN DATEPART(DW, @CurrentDate) = 6
+            THEN 'Samstag'
+            WHEN DATEPART(DW, @CurrentDate) = 7
+            THEN 'Sonntag'
+        END AS GermanNameDayOfWeek,
+        CASE
+            WHEN DATEPART(DW, @CurrentDate) = 1
+            THEN 'Monday'
+            WHEN DATEPART(DW, @CurrentDate) = 2
+            THEN 'Tuesday'
+            WHEN DATEPART(DW, @CurrentDate) = 3
+            THEN 'Wednesday'
+            WHEN DATEPART(DW, @CurrentDate) = 4
+            THEN 'Thursday'
+            WHEN DATEPART(DW, @CurrentDate) = 5
+            THEN 'Friday'
+            WHEN DATEPART(DW, @CurrentDate) = 6
+            THEN 'Saturday'
+            WHEN DATEPART(DW, @CurrentDate) = 7
+            THEN 'Sunday'
+        END AS EnglishNameDayOfWeek,
+
+        CASE
+            WHEN DATEPART(MM, @CurrentDate) = 1
+            THEN 'Janvier'
+            WHEN DATEPART(MM, @CurrentDate) = 2
+            THEN 'Février'
+            WHEN DATEPART(MM, @CurrentDate) = 3
+            THEN 'Mars'
+            WHEN DATEPART(MM, @CurrentDate) = 4
+            THEN 'Avril'
+            WHEN DATEPART(MM, @CurrentDate) = 5
+            THEN 'Mai'
+            WHEN DATEPART(MM, @CurrentDate) = 6
+            THEN 'Juin'
+            WHEN DATEPART(MM, @CurrentDate) = 7
+            THEN 'Juillet'
+            WHEN DATEPART(MM, @CurrentDate) = 8
+            THEN 'Aout'
+            WHEN DATEPART(MM, @CurrentDate) = 9
+            THEN 'Septembre'
+            WHEN DATEPART(MM, @CurrentDate) = 10
+            THEN 'Octobre'
+            WHEN DATEPART(MM, @CurrentDate) = 11
+            THEN 'Novembre'
+            WHEN DATEPART(MM, @CurrentDate) = 12
+            THEN 'Décembre'
+        END AS FrenchMonthName,
+        CASE
+            WHEN DATEPART(MM, @CurrentDate) = 1
+            THEN 'januari'
+            WHEN DATEPART(MM, @CurrentDate) = 2
+            THEN 'februari'
+            WHEN DATEPART(MM, @CurrentDate) = 3
+            THEN 'maart'
+            WHEN DATEPART(MM, @CurrentDate) = 4
+            THEN 'april'
+            WHEN DATEPART(MM, @CurrentDate) = 5
+            THEN 'mei'
+            WHEN DATEPART(MM, @CurrentDate) = 6
+            THEN 'juni'
+            WHEN DATEPART(MM, @CurrentDate) = 7
+            THEN 'juli'
+            WHEN DATEPART(MM, @CurrentDate) = 8
+            THEN 'augustus'
+            WHEN DATEPART(MM, @CurrentDate) = 9
+            THEN 'september'
+            WHEN DATEPART(MM, @CurrentDate) = 10
+            THEN 'oktober'
+            WHEN DATEPART(MM, @CurrentDate) = 11
+            THEN 'november'
+            WHEN DATEPART(MM, @CurrentDate) = 12
+            THEN 'december'
+        END AS DutchMonthName,
+        CASE
+            WHEN DATEPART(MM, @CurrentDate) = 1
+            THEN 'Januar'
+            WHEN DATEPART(MM, @CurrentDate) = 2
+            THEN 'Februar'
+            WHEN DATEPART(MM, @CurrentDate) = 3
+            THEN 'März'
+            WHEN DATEPART(MM, @CurrentDate) = 4
+            THEN 'April'
+            WHEN DATEPART(MM, @CurrentDate) = 5
+            THEN 'Mai'
+            WHEN DATEPART(MM, @CurrentDate) = 6
+            THEN 'Juni'
+            WHEN DATEPART(MM, @CurrentDate) = 7
+            THEN 'Juli'
+            WHEN DATEPART(MM, @CurrentDate) = 8
+            THEN 'August'
+            WHEN DATEPART(MM, @CurrentDate) = 9
+            THEN 'September'
+            WHEN DATEPART(MM, @CurrentDate) = 10
+            THEN 'Oktober'
+            WHEN DATEPART(MM, @CurrentDate) = 11
+            THEN 'November'
+            WHEN DATEPART(MM, @CurrentDate) = 12
+            THEN 'Dezember'
+        END AS GermanMonthName,
+        CASE
+            WHEN DATEPART(MM, @CurrentDate) = 1
+            THEN 'January'
+            WHEN DATEPART(MM, @CurrentDate) = 2
+            THEN 'February'
+            WHEN DATEPART(MM, @CurrentDate) = 3
+            THEN 'March'
+            WHEN DATEPART(MM, @CurrentDate) = 4
+            THEN 'April'
+            WHEN DATEPART(MM, @CurrentDate) = 5
+            THEN 'May'
+            WHEN DATEPART(MM, @CurrentDate) = 6
+            THEN 'June'
+            WHEN DATEPART(MM, @CurrentDate) = 7
+            THEN 'July'
+            WHEN DATEPART(MM, @CurrentDate) = 8
+            THEN 'August'
+            WHEN DATEPART(MM, @CurrentDate) = 9
+            THEN 'September'
+            WHEN DATEPART(MM, @CurrentDate) = 10
+            THEN 'October'
+            WHEN DATEPART(MM, @CurrentDate) = 11
+            THEN 'November'
+            WHEN DATEPART(MM, @CurrentDate) = 12
+            THEN 'December'
+        END AS EnglishMonthName
+
+    SET @CurrentDate = DATEADD(DD, 1, @CurrentDate)
+END
+
+SELECT * FROM @DimDate</property>
+                <property
+                  dataType="System.String"
+                  description="Variable contenant la commande SQL à exécuter."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Mappages entre les paramètres de la commande SQL et les variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Remplissage de DimDate\Source OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[vm-sql2.iesn.be\Stu3IG\1819_etu35397_DB.1819_etu35397]"
+                  connectionManagerRefId="Package.ConnectionManagers[vm-sql2.iesn.be\Stu3IG\1819_etu35397_DB.1819_etu35397]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB]"
+                  name="Sortie de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Id]"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[FullDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[FullDate]"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[FullDate]"
+                      name="FullDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[DayNumberOfWeek]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[DayNumberOfWeek]"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[DayNumberOfWeek]"
+                      name="DayNumberOfWeek"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[DayNumberOfMonth]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[DayNumberOfMonth]"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[DayNumberOfMonth]"
+                      name="DayNumberOfMonth"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[DayNumberOfYear]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[DayNumberOfYear]"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[DayNumberOfYear]"
+                      name="DayNumberOfYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[MonthNumberOfYear]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[MonthNumberOfYear]"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[MonthNumberOfYear]"
+                      name="MonthNumberOfYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Year]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Year]"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Year]"
+                      name="Year"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[FrenchNameDayOfWeek]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[FrenchNameDayOfWeek]"
+                      length="50"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[FrenchNameDayOfWeek]"
+                      name="FrenchNameDayOfWeek"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[DutchNameDayOfWeek]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[DutchNameDayOfWeek]"
+                      length="50"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[DutchNameDayOfWeek]"
+                      name="DutchNameDayOfWeek"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[GermanNameDayOfWeek]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[GermanNameDayOfWeek]"
+                      length="50"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[GermanNameDayOfWeek]"
+                      name="GermanNameDayOfWeek"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[EnglishNameDayOfWeek]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishNameDayOfWeek]"
+                      length="50"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[EnglishNameDayOfWeek]"
+                      name="EnglishNameDayOfWeek"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[FrenchMonthName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[FrenchMonthName]"
+                      length="50"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[FrenchMonthName]"
+                      name="FrenchMonthName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[DutchMonthName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[DutchMonthName]"
+                      length="50"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[DutchMonthName]"
+                      name="DutchMonthName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[GermanMonthName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[GermanMonthName]"
+                      length="50"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[GermanMonthName]"
+                      name="GermanMonthName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[EnglishMonthName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishMonthName]"
+                      length="50"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[EnglishMonthName]"
+                      name="EnglishMonthName"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[FullDate]"
+                      dataType="dbDate"
+                      name="FullDate" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[DayNumberOfWeek]"
+                      dataType="i4"
+                      name="DayNumberOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[DayNumberOfMonth]"
+                      dataType="i4"
+                      name="DayNumberOfMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[DayNumberOfYear]"
+                      dataType="i4"
+                      name="DayNumberOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[MonthNumberOfYear]"
+                      dataType="i4"
+                      name="MonthNumberOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Year]"
+                      dataType="i4"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[FrenchNameDayOfWeek]"
+                      dataType="wstr"
+                      length="50"
+                      name="FrenchNameDayOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[DutchNameDayOfWeek]"
+                      dataType="wstr"
+                      length="50"
+                      name="DutchNameDayOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[GermanNameDayOfWeek]"
+                      dataType="wstr"
+                      length="50"
+                      name="GermanNameDayOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishNameDayOfWeek]"
+                      dataType="wstr"
+                      length="50"
+                      name="EnglishNameDayOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[FrenchMonthName]"
+                      dataType="wstr"
+                      length="50"
+                      name="FrenchMonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[DutchMonthName]"
+                      dataType="wstr"
+                      length="50"
+                      name="DutchMonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[GermanMonthName]"
+                      dataType="wstr"
+                      length="50"
+                      name="GermanMonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishMonthName]"
+                      dataType="wstr"
+                      length="50"
+                      name="EnglishMonthName" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Id]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[FullDate]"
+                      dataType="dbDate"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[FullDate]"
+                      name="FullDate" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[DayNumberOfWeek]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[DayNumberOfWeek]"
+                      name="DayNumberOfWeek" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[DayNumberOfMonth]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[DayNumberOfMonth]"
+                      name="DayNumberOfMonth" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[DayNumberOfYear]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[DayNumberOfYear]"
+                      name="DayNumberOfYear" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[MonthNumberOfYear]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[MonthNumberOfYear]"
+                      name="MonthNumberOfYear" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Year]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Year]"
+                      name="Year" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[FrenchNameDayOfWeek]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[FrenchNameDayOfWeek]"
+                      name="FrenchNameDayOfWeek" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[DutchNameDayOfWeek]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[DutchNameDayOfWeek]"
+                      name="DutchNameDayOfWeek" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[GermanNameDayOfWeek]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[GermanNameDayOfWeek]"
+                      name="GermanNameDayOfWeek" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishNameDayOfWeek]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishNameDayOfWeek]"
+                      name="EnglishNameDayOfWeek" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[FrenchMonthName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[FrenchMonthName]"
+                      name="FrenchMonthName" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[DutchMonthName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[DutchMonthName]"
+                      name="DutchMonthName" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[GermanMonthName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[GermanMonthName]"
+                      name="GermanMonthName" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishMonthName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishMonthName]"
+                      name="EnglishMonthName" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Remplissage de DimDate.Paths[Sortie de source OLE DB]"
+              endId="Package\Remplissage de DimDate\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de source OLE DB"
+              startId="Package\Remplissage de DimDate\Source OLE DB.Outputs[Sortie de source OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Remplissage de DimProduct"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{19317b5c-3cad-4b48-953e-24c057ac172a}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Remplissage de DimProduct"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Remplissage de DimProduct\Source OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Source OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;7"
+              description="Source OLE DB"
+              name="Source OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable contenant la commande SQL à exécuter."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mappages entre les paramètres de la commande SQL et les variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Remplissage de DimProduct\Source OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[vm-sql2.iesn.be\Stu3IG.BIProject_OLTP.1819_etu35397]"
+                  connectionManagerRefId="Package.ConnectionManagers[vm-sql2.iesn.be\Stu3IG.BIProject_OLTP.1819_etu35397]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie de source OLE DB]"
+                  name="Sortie de source OLE DB">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </output>
+                <output
+                  refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimProduct\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Remplissage de DimStore"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{4fd89fe0-5f5e-4385-bb7b-18ce34496af6}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Remplissage de DimStore"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Remplissage de DimStore\Source OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Source OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;7"
+              description="Source OLE DB"
+              name="Source OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable contenant la commande SQL à exécuter."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mappages entre les paramètres de la commande SQL et les variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Remplissage de DimStore\Source OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[vm-sql2.iesn.be\Stu3IG.BIProject_OLTP.1819_etu35397]"
+                  connectionManagerRefId="Package.ConnectionManagers[vm-sql2.iesn.be\Stu3IG.BIProject_OLTP.1819_etu35397]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie de source OLE DB]"
+                  name="Sortie de source OLE DB">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </output>
+                <output
+                  refId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de DimStore\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Remplissage de Fact"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{2fc50fba-1eac-4a4b-9bb9-4709193563ca}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Remplissage de Fact"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Remplissage de Fact\Destination OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Destination OLE DB"
+              name="Destination OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Remplissage de Fact\Destination OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[vm-sql2.iesn.be\Stu3IG\1819_etu35397_DB.1819_etu35397]"
+                  connectionManagerRefId="Package.ConnectionManagers[vm-sql2.iesn.be\Stu3IG\1819_etu35397_DB.1819_etu35397]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Remplissage de Fact\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination OLE DB">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Remplissage de Fact\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination OLE DB"
+                  synchronousInputId="Package\Remplissage de Fact\Destination OLE DB.Inputs[Entrée de destination OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Remplissage de Fact\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de Fact\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Remplissage de Fact\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de Fact\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Remplissage de Fact\Source Excel"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Source Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Source Excel"
+              name="Source Excel"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable contenant la commande SQL à exécuter."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mappage des paramètres de la commande SQL en variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Remplissage de Fact\Source Excel.Connections[OleDbConnection]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Remplissage de Fact\Source Excel.Outputs[Sortie de source Excel]"
+                  name="Sortie de source Excel">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </output>
+                <output
+                  refId="Package\Remplissage de Fact\Source Excel.Outputs[Sortie d'erreur de source Excel]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Remplissage de Fact\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de Fact\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Remplissage de Fact\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de Fact\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Remplissage de Fact\Source OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Source OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;7"
+              description="Source OLE DB"
+              name="Source OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable contenant la commande SQL à exécuter."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mappages entre les paramètres de la commande SQL et les variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Remplissage de Fact\Source OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[vm-sql2.iesn.be\Stu3IG.BIProject_OLTP.1819_etu35397]"
+                  connectionManagerRefId="Package.ConnectionManagers[vm-sql2.iesn.be\Stu3IG.BIProject_OLTP.1819_etu35397]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Remplissage de Fact\Source OLE DB.Outputs[Sortie de source OLE DB]"
+                  name="Sortie de source OLE DB">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </output>
+                <output
+                  refId="Package\Remplissage de Fact\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Remplissage de Fact\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de Fact\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Remplissage de Fact\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Remplissage de Fact\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte]"
+      DTS:CreationName=""
+      DTS:DTSID="{7D6C68DF-F4D2-4363-BCB5-5C83888DF5EE}"
+      DTS:From="Package\Remise à zéro de la Warehouse"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte"
+      DTS:To="Package\Remplissage de DimDate" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{84D0C607-C76C-45B1-8A4C-91E4B50F99B1}"
+      DTS:From="Package\Remise à zéro de la Warehouse"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte 1"
+      DTS:To="Package\Remplissage de DimStore" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{D92309F2-FA0C-4A9E-9777-3310E206F066}"
+      DTS:From="Package\Remise à zéro de la Warehouse"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte 2"
+      DTS:To="Package\Remplissage de DimProduct" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{D2100657-0970-4707-B9FA-06920A8C6B40}"
+      DTS:From="Package\Remise à zéro de la Warehouse"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte 3"
+      DTS:To="Package\Remplissage de DimCustomer" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{E3ADEDED-D3CC-4579-9EC8-9D5CAEDD54AE}"
+      DTS:From="Package\Remplissage de DimDate"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte 4"
+      DTS:To="Package\Remplissage de Fact" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{681F82C2-C53F-4ED1-AEB6-59FB1F83D2C3}"
+      DTS:From="Package\Remplissage de DimStore"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte 5"
+      DTS:To="Package\Remplissage de Fact" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{27F8ABD9-71E9-440D-93F2-C0454310A911}"
+      DTS:From="Package\Remplissage de DimProduct"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte 6"
+      DTS:To="Package\Remplissage de Fact" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{BAA9F2BA-C7CD-4F63-9742-04CA017266EA}"
+      DTS:From="Package\Remplissage de DimCustomer"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte 7"
+      DTS:To="Package\Remplissage de Fact" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
+<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<Objects
+  Version="8">
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="196,42"
+          Id="Package\Remplissage de DimDate"
+          TopLeft="42,174" />
+        <NodeLayout
+          Size="228,42"
+          Id="Package\Remise à zéro de la Warehouse"
+          TopLeft="393,13" />
+        <NodeLayout
+          Size="199,42"
+          Id="Package\Remplissage de DimStore"
+          TopLeft="280,172" />
+        <NodeLayout
+          Size="210,42"
+          Id="Package\Remplissage de DimProduct"
+          TopLeft="535,177" />
+        <NodeLayout
+          Size="219,42"
+          Id="Package\Remplissage de DimCustomer"
+          TopLeft="799,174" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Remplissage de Fact"
+          TopLeft="424,382" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte]"
+          TopLeft="441,55">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-301,119"
+              Start="0,0"
+              End="-301,111.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.2592592592593" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.2592592592593"
+                    Point2="0,35.2592592592593"
+                    Point3="-4,35.2592592592593" />
+                  <mssgle:LineSegment
+                    End="-297,35.2592592592593" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-297,35.2592592592593"
+                    Point2="-301,35.2592592592593"
+                    Point3="-301,39.2592592592593" />
+                  <mssgle:LineSegment
+                    End="-301,111.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte 1]"
+          TopLeft="485,55">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-105.5,117"
+              Start="0,0"
+              End="-105.5,109.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.252427184466" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,48.252427184466"
+                    Point2="0,52.252427184466"
+                    Point3="-4,52.252427184466" />
+                  <mssgle:LineSegment
+                    End="-101.5,52.252427184466" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-101.5,52.252427184466"
+                    Point2="-105.5,52.252427184466"
+                    Point3="-105.5,56.252427184466" />
+                  <mssgle:LineSegment
+                    End="-105.5,109.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte 2]"
+          TopLeft="529,55">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="111,122"
+              Start="0,0"
+              End="111,114.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.4854368932039" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,50.4854368932039"
+                    Point2="0,54.4854368932039"
+                    Point3="4,54.4854368932039" />
+                  <mssgle:LineSegment
+                    End="107,54.4854368932039" />
+                  <mssgle:CubicBezierSegment
+                    Point1="107,54.4854368932039"
+                    Point2="111,54.4854368932039"
+                    Point3="111,58.4854368932039" />
+                  <mssgle:LineSegment
+                    End="111,114.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte 3]"
+          TopLeft="573,55">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="335.5,119"
+              Start="0,0"
+              End="335.5,111.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.2592592592593" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.2592592592593"
+                    Point2="0,35.2592592592593"
+                    Point3="4,35.2592592592593" />
+                  <mssgle:LineSegment
+                    End="331.5,35.2592592592593" />
+                  <mssgle:CubicBezierSegment
+                    Point1="331.5,35.2592592592593"
+                    Point2="335.5,35.2592592592593"
+                    Point3="335.5,39.2592592592593" />
+                  <mssgle:LineSegment
+                    End="335.5,111.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte 4]"
+          TopLeft="140,216">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="321.4,166"
+              Start="0,0"
+              End="321.4,158.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,112.293034427542" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,112.293034427542"
+                    Point2="0,116.293034427542"
+                    Point3="4,116.293034427542" />
+                  <mssgle:LineSegment
+                    End="317.4,116.293034427542" />
+                  <mssgle:CubicBezierSegment
+                    Point1="317.4,116.293034427542"
+                    Point2="321.4,116.293034427542"
+                    Point3="321.4,120.293034427542" />
+                  <mssgle:LineSegment
+                    End="321.4,158.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte 5]"
+          TopLeft="379.5,214">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="115.3,168"
+              Start="0,0"
+              End="115.3,160.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,88.8616550852811" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,88.8616550852811"
+                    Point2="0,92.8616550852811"
+                    Point3="4,92.8616550852811" />
+                  <mssgle:LineSegment
+                    End="111.3,92.8616550852811" />
+                  <mssgle:CubicBezierSegment
+                    Point1="111.3,92.8616550852811"
+                    Point2="115.3,92.8616550852811"
+                    Point3="115.3,96.8616550852811" />
+                  <mssgle:LineSegment
+                    End="115.3,160.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte 6]"
+          TopLeft="640,219">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-111.8,163"
+              Start="0,0"
+              End="-111.8,155.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,86.0979153506001" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,86.0979153506001"
+                    Point2="0,90.0979153506001"
+                    Point3="-4,90.0979153506001" />
+                  <mssgle:LineSegment
+                    End="-107.8,90.0979153506001" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-107.8,90.0979153506001"
+                    Point2="-111.8,90.0979153506001"
+                    Point3="-111.8,94.0979153506001" />
+                  <mssgle:LineSegment
+                    End="-111.8,155.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte 7]"
+          TopLeft="908.5,216">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-346.9,166"
+              Start="0,0"
+              End="-346.9,158.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,112.293034427542" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,112.293034427542"
+                    Point2="0,116.293034427542"
+                    Point3="-4,116.293034427542" />
+                  <mssgle:LineSegment
+                    End="-342.9,116.293034427542" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-342.9,116.293034427542"
+                    Point2="-346.9,116.293034427542"
+                    Point3="-346.9,120.293034427542" />
+                  <mssgle:LineSegment
+                    End="-346.9,158.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Remplissage de DimDate">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Remplissage de DimDate\Destination OLE DB"
+          TopLeft="266.441558441558,334.25974025974" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Remplissage de DimDate\Source OLE DB"
+          TopLeft="277,155" />
+        <EdgeLayout
+          Id="Package\Remplissage de DimDate.Paths[Sortie de source OLE DB]"
+          TopLeft="351.970779220779,197">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,137.25974025974"
+              Start="0,0"
+              End="0,129.75974025974">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,129.75974025974" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Remplissage de DimStore">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Remplissage de DimStore\Source OLE DB"
+          TopLeft="364,57" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Remplissage de DimProduct">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Remplissage de DimProduct\Source OLE DB"
+          TopLeft="364,57" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Remplissage de DimCustomer">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Remplissage de DimCustomer\Source OLE DB"
+          TopLeft="364,57" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Remplissage de Fact">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Remplissage de Fact\Destination OLE DB"
+          TopLeft="349,784" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Remplissage de Fact\Source Excel"
+          TopLeft="784,510" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Remplissage de Fact\Source OLE DB"
+          TopLeft="364,57" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Remplissage de DimDate\Destination OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Remplissage de DimDate\Source OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
