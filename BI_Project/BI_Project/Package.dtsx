@@ -11,8 +11,8 @@
   DTS:LocaleID="2060"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{E287A5ED-D5A6-4D25-8572-F0AF03E6ECBC}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{3F28911C-3CAE-41B5-A404-52B2FF74B91D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,7 +23,7 @@
       DTS:ObjectName="Gestionnaire de connexions Excel">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Damien\Documents\info\IESN\Bloc3\BI\scholtes\Project\BI-project\Outils\zipcodes_num_fr.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Damien\Documents\info\IESN\Bloc3\BI\scholtes\Project\BI-project\srcs\zipcodes_num_fr.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -37,7 +37,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAXWZtJr+GWECuMYAw/T3oGQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACh0oyoTVdbEooh96EjbRs17uFoDUgT7ESkqdc5AISMTwAAAAAOgAAAAAIAACAAAABMuGE8cZmw9e2z5QgehTX7GlFvOfxWLZ4oZTJer2SpVSAAAACoBNoEgtfdxBDhb5x16wGKTZq8dTpUAqNYnn6vRMRNekAAAABrL8OZBgkRcg6dpiSz+pkkvXYwFpmcwRHQlfzTC5AR3X9l/klX3WNKEmarRbFKaFM1pG0I/zWxalM7WwpoK6dI</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAXWZtJr+GWECuMYAw/T3oGQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACQDyIrQG1hLWT3x4mZ+2Rx5E6AV/F9JBEdFm7s5a8omwAAAAAOgAAAAAIAACAAAACoTkZ1+nbPu40GSSzj6DVRXR9khUSAHF4ovMJiB3DToCAAAADMLVFm0agbZvsxG4qeD/xcNLLBg6YBbGVkqc5Qef7WwUAAAABcQ+2VicatKckBQLscDdJUHKJSJRX3xWIYWYd5fAvAeKfYYbhFsNnFmEyogtSQChS1sB1D/2p2WqVycPAw5umP</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -52,7 +52,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAXWZtJr+GWECuMYAw/T3oGQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADaedkQqzsiVEX9ixCGK0yhaf+4NH1AaiviQDhkCu/vuwAAAAAOgAAAAAIAACAAAACOmCqqVykN6sOCJkw+lIHOZ5TwLfpHZ0E+p4h+CK3kriAAAABjjvcjzK7zNUlopkpFPlkoTkGOmQEdrvFu8s3x0eQEFEAAAACbHrZUY28eLd5ctkTLBmS3i0d4HhQVggWUcqtz2H06xg5tJ9U/BDkSO4nAqsH7nXCNL1RFYIkkxhfP2nPh743G</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAXWZtJr+GWECuMYAw/T3oGQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABlaPmacyUsvMCKutLZkyyECtaB35ANdN3G94RwTbz3+AAAAAAOgAAAAAIAACAAAACRoKy26jeCvD4MBDNmiJcIfbegM811U7KDenZZHkMjsyAAAAAFFmQV7rYfavjjAJ0jPNihQEhCi+ZhQuTCrJoy+fTFVkAAAABDgv71D+tPbNVD5TLlicahh8tY78f2XKMcqRtn061xj5TiOfhvdvrLR2gJ0cltbRBVnuoUp5JpPd4ZkQQzDL/Z</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -5016,17 +5016,45 @@ SELECT * FROM @DimDate</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="145,42"
+          Id="Package\Remplissage de DimProduct\TrierCategory"
+          TopLeft="385,130" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Remplissage de DimProduct\TrierDepartment"
+          TopLeft="92,131" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Remplissage de DimProduct\TrierProduct"
+          TopLeft="625,133" />
+        <NodeLayout
+          Size="103,42"
+          Id="Package\Remplissage de DimProduct\Trier"
+          TopLeft="272,297" />
+        <NodeLayout
           Size="146,42"
           Id="Package\Remplissage de DimProduct\RecupProduct"
           TopLeft="618,34" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Remplissage de DimProduct\RecupCategory"
+          TopLeft="377,38" />
         <NodeLayout
           Size="166,42"
           Id="Package\Remplissage de DimProduct\RecupDepartment"
           TopLeft="71,36" />
         <NodeLayout
-          Size="159,42"
-          Id="Package\Remplissage de DimProduct\TrierDepartment"
-          TopLeft="92,131" />
+          Size="174,42"
+          Id="Package\Remplissage de DimProduct\Jointure de fusion 1"
+          TopLeft="480,370" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\Remplissage de DimProduct\Destination DimProduct"
+          TopLeft="480,459" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Remplissage de DimProduct\Jointure de fusion"
+          TopLeft="240,207" />
         <EdgeLayout
           Id="Package\Remplissage de DimProduct.Paths[Sortie de source OLE DB]"
           TopLeft="154,78">
@@ -5061,28 +5089,32 @@ SELECT * FROM @DimDate</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="152,42"
-          Id="Package\Remplissage de DimProduct\RecupCategory"
-          TopLeft="377,38" />
-        <NodeLayout
-          Size="145,42"
-          Id="Package\Remplissage de DimProduct\TrierCategory"
-          TopLeft="385,130" />
         <EdgeLayout
-          Id="Package\Remplissage de DimProduct.Paths[Sortie de source OLE DB1]"
-          TopLeft="455.25,80">
+          Id="Package\Remplissage de DimProduct.Paths[Sortie de jointure de fusion1]"
+          TopLeft="567,412">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,50"
+              EndConnector="9,47"
               Start="0,0"
-              End="0,42.5">
+              End="9,39.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,42.5" />
+                    End="0,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.5"
+                    Point2="0,23.5"
+                    Point3="4,23.5" />
+                  <mssgle:LineSegment
+                    End="5,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5,23.5"
+                    Point2="9,23.5"
+                    Point3="9,27.5" />
+                  <mssgle:LineSegment
+                    End="9,39.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5091,108 +5123,6 @@ SELECT * FROM @DimDate</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="165,42"
-          Id="Package\Remplissage de DimProduct\Jointure de fusion"
-          TopLeft="240,207" />
-        <EdgeLayout
-          Id="Package\Remplissage de DimProduct.Paths[Sortie de tri]"
-          TopLeft="171.5,173">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="151,34"
-              Start="0,0"
-              End="151,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13"
-                    Point2="0,17"
-                    Point3="4,17" />
-                  <mssgle:LineSegment
-                    End="147,17" />
-                  <mssgle:CubicBezierSegment
-                    Point1="147,17"
-                    Point2="151,17"
-                    Point3="151,21" />
-                  <mssgle:LineSegment
-                    End="151,26.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Remplissage de DimProduct.Paths[Sortie de tri1]"
-          TopLeft="457.5,172">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-108.833333333333,35"
-              Start="0,0"
-              End="-108.833333333333,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.7983193277311" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.7983193277311"
-                    Point2="0,20.7983193277311"
-                    Point3="-4,20.7983193277311" />
-                  <mssgle:LineSegment
-                    End="-104.833333333333,20.7983193277311" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-104.833333333333,20.7983193277311"
-                    Point2="-108.833333333333,20.7983193277311"
-                    Point3="-108.833333333333,24.7983193277311" />
-                  <mssgle:LineSegment
-                    End="-108.833333333333,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="139,42"
-          Id="Package\Remplissage de DimProduct\TrierProduct"
-          TopLeft="625,133" />
-        <EdgeLayout
-          Id="Package\Remplissage de DimProduct.Paths[Sortie de source OLE DB2]"
-          TopLeft="692.75,76">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,57"
-              Start="0,0"
-              End="0,49.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="103,42"
-          Id="Package\Remplissage de DimProduct\Trier"
-          TopLeft="272,297" />
         <EdgeLayout
           Id="Package\Remplissage de DimProduct.Paths[Sortie de jointure de fusion]"
           TopLeft="323,249">
@@ -5207,44 +5137,6 @@ SELECT * FROM @DimDate</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,40.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="174,42"
-          Id="Package\Remplissage de DimProduct\Jointure de fusion 1"
-          TopLeft="480,370" />
-        <EdgeLayout
-          Id="Package\Remplissage de DimProduct.Paths[Sortie de tri2]"
-          TopLeft="323.5,339">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="215.833333333333,31"
-              Start="0,0"
-              End="215.833333333333,23.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14.4305239179954" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.4305239179954"
-                    Point2="0,18.4305239179954"
-                    Point3="4,18.4305239179954" />
-                  <mssgle:LineSegment
-                    End="211.833333333333,18.4305239179954" />
-                  <mssgle:CubicBezierSegment
-                    Point1="211.833333333333,18.4305239179954"
-                    Point2="215.833333333333,18.4305239179954"
-                    Point3="215.833333333333,22.4305239179954" />
-                  <mssgle:LineSegment
-                    End="215.833333333333,23.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5287,36 +5179,144 @@ SELECT * FROM @DimDate</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="192,42"
-          Id="Package\Remplissage de DimProduct\Destination DimProduct"
-          TopLeft="480,459" />
         <EdgeLayout
-          Id="Package\Remplissage de DimProduct.Paths[Sortie de jointure de fusion1]"
-          TopLeft="567,412">
+          Id="Package\Remplissage de DimProduct.Paths[Sortie de tri2]"
+          TopLeft="323.5,339">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="9,47"
+              EndConnector="215.833333333333,31"
               Start="0,0"
-              End="9,39.5">
+              End="215.833333333333,23.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.5" />
+                    End="0,14.4305239179954" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.5"
-                    Point2="0,23.5"
-                    Point3="4,23.5" />
+                    Point1="0,14.4305239179954"
+                    Point2="0,18.4305239179954"
+                    Point3="4,18.4305239179954" />
                   <mssgle:LineSegment
-                    End="5,23.5" />
+                    End="211.833333333333,18.4305239179954" />
                   <mssgle:CubicBezierSegment
-                    Point1="5,23.5"
-                    Point2="9,23.5"
-                    Point3="9,27.5" />
+                    Point1="211.833333333333,18.4305239179954"
+                    Point2="215.833333333333,18.4305239179954"
+                    Point3="215.833333333333,22.4305239179954" />
                   <mssgle:LineSegment
-                    End="9,39.5" />
+                    End="215.833333333333,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Remplissage de DimProduct.Paths[Sortie de tri1]"
+          TopLeft="457.5,172">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-108.833333333333,35"
+              Start="0,0"
+              End="-108.833333333333,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.7983193277311" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.7983193277311"
+                    Point2="0,20.7983193277311"
+                    Point3="-4,20.7983193277311" />
+                  <mssgle:LineSegment
+                    End="-104.833333333333,20.7983193277311" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-104.833333333333,20.7983193277311"
+                    Point2="-108.833333333333,20.7983193277311"
+                    Point3="-108.833333333333,24.7983193277311" />
+                  <mssgle:LineSegment
+                    End="-108.833333333333,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Remplissage de DimProduct.Paths[Sortie de tri]"
+          TopLeft="171.5,173">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="151,34"
+              Start="0,0"
+              End="151,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13"
+                    Point2="0,17"
+                    Point3="4,17" />
+                  <mssgle:LineSegment
+                    End="147,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="147,17"
+                    Point2="151,17"
+                    Point3="151,21" />
+                  <mssgle:LineSegment
+                    End="151,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Remplissage de DimProduct.Paths[Sortie de source OLE DB2]"
+          TopLeft="692.75,76">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57"
+              Start="0,0"
+              End="0,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Remplissage de DimProduct.Paths[Sortie de source OLE DB1]"
+          TopLeft="455.25,80">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50"
+              Start="0,0"
+              End="0,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5330,6 +5330,45 @@ SELECT * FROM @DimDate</property>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Remplissage de DimProduct\RecupProduct">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Remplissage de DimProduct\RecupCategory">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Remplissage de DimProduct\RecupDepartment">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Remplissage de DimProduct\Destination DimProduct">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5388,45 +5427,6 @@ SELECT * FROM @DimDate</property>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Remplissage de Fact\Source Excel">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Remplissage de DimProduct\RecupDepartment">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Remplissage de DimProduct\RecupCategory">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Remplissage de DimProduct\Destination DimProduct">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
