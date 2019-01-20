@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="1/19/2019 5:36:22 PM"
@@ -33,7 +33,7 @@
       DTS:ObjectName="FichierExcelErreur">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\FichierErreur.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\FichierErreur.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -43,7 +43,7 @@
       DTS:ObjectName="Gestionnaire de connexions Excel">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\zipcodes_num_frV2.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\zipcodes_num_frV2.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -53,7 +53,7 @@
       DTS:ObjectName="Gestionnaire de connexions Excel 1">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\zipcodes_num_frV2.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\zipcodes_num_frV2.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -67,7 +67,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6Rl/kUM2oE2O/CgcvdKEVAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADwA/YYuSKpuOto5InxkSPcQ0CBqKWBIsQ+6NRg2wAdbQAAAAAOgAAAAAIAACAAAADeXI0wH9GQ/c7+72gSQpkBjWou2KI6frGYPgng4/xAHCAAAABs7t7HzGO6x4mBr7nKw/njO0LPQh/oVBX2znqEzHuofUAAAAD3EQPxYDJrRkv2G07cqGcl0lZJkobHFve2pjKe4XpItx+rd1k1bOHk5NlvgI9cw1PZTE9ZzFL7SFlzXTOxR7uB</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6Rl/kUM2oE2O/CgcvdKEVAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACtDhrlFPmTDO8esfPzbfx5eR6UWZM2syOFwEc0CLTncwAAAAAOgAAAAAIAACAAAADY+jXCVCRGfGvE9vqr8zgCevoU4zlr76N86Qdm5V8DISAAAADU06pjv/QHXSWJ2a+1BUczHlVUW0Ixa/EDzNKtA+Fb/0AAAADtv2D0UA0RgH8LU8iDGrAFaGrktNqTPpYqWBAbHML1gl3KKd9PFLUdbD0abgGmAwtxP9LB4qsIyHU1aeOANbVs</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -82,7 +82,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6Rl/kUM2oE2O/CgcvdKEVAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADlrwTanOJOVLTMRNMbf1FzJSRHHIWcNKYHgHe++zQmKwAAAAAOgAAAAAIAACAAAABz1G62HWxBC1UHDc+C83mCt034vFaOdo54wdzGJ8O2iyAAAAC1bqmMVXcL794OAlw8xnHvRiwFvyqUpFuMX08F3FwlXUAAAACbbWFbIpczRHTVx9PvIXeUIPIHe97ARt+vhJIZJ3BUCzf8t5vuoZsaKgBOLN7tn8RcKGID2BOgJ4ivYjAaPizo</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6Rl/kUM2oE2O/CgcvdKEVAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAy1Xz/dybgDwPxng4FK4G4kCZKCVQqhFNXw+DkOQTDTwAAAAAOgAAAAAIAACAAAAArFs+ftwBB7CwTL9w3upLHaH1XPuUnw77+P13cdi1N2SAAAAA3MVipCoMF4gowW72z/GCQ7Vv5GchbK0Ij8VnH7RhWT0AAAAAIeWQ7ssBKAvu74XWYQ5QnnSee3GRGwfsM+zSm6IB3eEhFYCSPltt8X6kUcw5Y3Gjeb3JCBA+l0/nBXoNJNNJA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
