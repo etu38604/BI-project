@@ -1,0 +1,9 @@
+1326|Buteau|Eveline|Rue des accacias, 12|Gotham|3|814795078|2017-06-20 22:48:51.973000000|Marié|Getrouwd|Verheiratet|Married||9999|Grand Souk|-1071607683|92
+1353|Sappington|Catherine|Rue des Genets, 100|Gotham|1|434227731|2016-05-18 22:48:51.970000000|Célibataire|Single|Single|Single||9999|Grand Souk|-1071607683|92
+1243|Sobczak|Silas|Boulevard Général Jacques, 16|Gotham|3|1575717623|2016-05-27 22:48:51.977000000|Célibataire|Single|Single|Single||9999|Grand Souk|-1071607683|92
+1289|Kania|Gregory|Rue Sonnetty, 19|Gotham|2|1327596516|2015-03-13 22:48:51.980000000|Marié|Getrouwd|Verheiratet|Married||9999|Grand Souk|-1071607683|92
+1261|Boling|Boyd|Rue Joseph II, 38|Gotham|4|2144360647|2017-04-03 22:48:51.983000000|Célibataire|Single|Single|Single||9999|Grand Souk|-1071607683|92
+1399|Dryden|Dawne|Rue des Genets, 100|Gotham|2|889630877|2016-02-11 22:48:51.973000000|Célibataire|Single|Single|Single||9999|Grand Souk|-1071607683|92
+1216|Bartleson|Wilson|Rue des Genets, 100|Gotham|1|1850187134|2017-05-12 22:48:51.980000000|Marié|Getrouwd|Verheiratet|Married||9999|Grand Souk|-1071607683|92
+1371|Hogans|Gabriella|Rue des Genets, 100|Gotham|0|1511074437|2015-09-21 22:48:51.977000000|Célibataire|Single|Single|Single||9999|Grand Souk|-1071607683|92
+1278|Doe|John|Rue des Molons, 3|Namuuuuur|3|123456789|2017-12-05 22:48:51.983000000|Célibataire|Single|Single|Single||50000|Grand Souk|-1071607683|92
