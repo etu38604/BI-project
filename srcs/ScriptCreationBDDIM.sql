@@ -78,7 +78,7 @@ Create Table [dbo].[DimDate]
 	EnglishMonthName nvarchar(50) NOT NULL
 );
 
-Create Table [dbo].[FactReceiptLine]
+Create Table [dbo].[Fact]
 (
 	Id int primary key identity(1,1),
 	Quantity int NOT NULL,
