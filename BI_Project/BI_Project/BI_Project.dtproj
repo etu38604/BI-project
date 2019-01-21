@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">PC-PH-TOUR</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6Rl/kUM2oE2O/CgcvdKEVAAAAAACAAAAAAAQZgAAAAEAACAAAABBiMcmgG2lYvXpQshDkvHv4cg3EaiZbh6aocfXaEVJXgAAAAAOgAAAAAIAACAAAADAB41hSU2TeLBwEwTu15LyDqKRKTV3FPOSJOUjim5jX5AAAADaZVUMfuzEvE5Gus5ITkU897P2veOnPdj1hnmxQmE9ufzp8H0FKaPchR+Nmv7VZnnzjqsfrXUr6FB0TOYW+UCAVaE3r0EazcQH3/3WlDeJ7R9UiBlKX7Gv3NrlJ6sLyFyCF3d3AJtvGwI8IiBi111L6iusLqaggRR0W2FC08LMz/zUEtHymQxW5bl0jDFa9dpAAAAAs6JesUkST4I1qKc+Wqfmk/PYIE+mrmer3JVDnsBnred5hVsZw/P944X9OcVbGKfloNpHTgwOFAckVjMNro/YWg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAXWZtJr+GWECuMYAw/T3oGQAAAAACAAAAAAAQZgAAAAEAACAAAAB8soDcTobqsHQYRybzTiMOArnQULsk4QvRyU2qrCYhzAAAAAAOgAAAAAIAACAAAADI+XWI33mXICfBHzPfLqekz6DC/uIRtBo8jIB2zYzZTJAAAADS/mgEfoOXLRfHnG1OR4o9CnW5DV9/6iA2vB+Nl4LfkxkrYmk13Loq2SpXsPOII0XkW6fRvRp+1+eZIVLPBz3+bgEw5AiOq0Hqr2YaWqAC+zrDuYU8NyFpGwhRT0Y1InfN6Y2TGOwCrOeLvsfkSN7t8mw8SyDN8MKn0TIlzyJ705VtABkcC8JWmzKud0cKeJJAAAAAywqGegkmMn02K8lzmXCzl4vS0KdK7kFVHdlkAnNsJwJKU910gezgnQtF+F9YP/1mDFqTC7yOtCiAnDVelU51Yg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">74</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">78</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{3D0A0754-CC58-44CE-803F-3F0CE8E2DC9C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{3827C5ED-BD07-4A60-9EAD-19D2EB804C03}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -63,7 +63,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\zipcodes_num_frV2.xls;Extended Properties="EXCEL 8.0;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Damien\Documents\info\IESN\Bloc3\BI\scholtes\Project\BI-project\srcs\zipcodes_num_frV2_old.xls;Extended Properties="EXCEL 8.0;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -78,7 +78,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\zipcodes_num_frV2.xls</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\Damien\Documents\info\IESN\Bloc3\BI\scholtes\Project\BI-project\srcs\zipcodes_num_frV2_old.xls</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -151,7 +151,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\zipcodes_num_frV2.xls</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\Damien\Documents\info\IESN\Bloc3\BI\scholtes\Project\BI-project\srcs\zipcodes_num_frV2_old.xls</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -180,7 +180,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\FichierErreur.xls;Extended Properties="Excel 8.0;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Damien\Documents\info\IESN\Bloc3\BI\scholtes\Project\BI-project\srcs\FichierErreur.xls;Extended Properties="EXCEL 8.0;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -195,7 +195,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\FichierErreur.xls</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\Damien\Documents\info\IESN\Bloc3\BI\scholtes\Project\BI-project\srcs\FichierErreur.xls</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -268,7 +268,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\FichierErreur.xls</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\Damien\Documents\info\IESN\Bloc3\BI\scholtes\Project\BI-project\srcs\FichierErreur.xls</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -342,7 +342,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\ERROR.txt</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\Damien\Documents\info\IESN\Bloc3\BI\scholtes\Project\BI-project\srcs\ERROR.txt</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -433,6 +433,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -477,7 +479,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\zipcodes_num_frV2.xls;Extended Properties="Excel 8.0;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Damien\Documents\info\IESN\Bloc3\BI\scholtes\Project\BI-project\srcs\zipcodes_num_frV2_old.xls;Extended Properties="EXCEL 8.0;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -492,7 +494,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\zipcodes_num_frV2.xls</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\Damien\Documents\info\IESN\Bloc3\BI\scholtes\Project\BI-project\srcs\zipcodes_num_frV2_old.xls</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -565,7 +567,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\zipcodes_num_frV2.xls</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\Damien\Documents\info\IESN\Bloc3\BI\scholtes\Project\BI-project\srcs\zipcodes_num_frV2_old.xls</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -594,7 +596,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\zipcodes_num_frV2.xls;Extended Properties="Excel 8.0;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Damien\Documents\info\IESN\Bloc3\BI\scholtes\Project\BI-project\srcs\zipcodes_num_frV2_old.xls;Extended Properties="EXCEL 8.0;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -609,7 +611,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\zipcodes_num_frV2.xls</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\Damien\Documents\info\IESN\Bloc3\BI\scholtes\Project\BI-project\srcs\zipcodes_num_frV2_old.xls</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -682,7 +684,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\zipcodes_num_frV2.xls</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\Damien\Documents\info\IESN\Bloc3\BI\scholtes\Project\BI-project\srcs\zipcodes_num_frV2_old.xls</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -711,7 +713,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\zipcodes_num_frV2.xls;Extended Properties="Excel 8.0;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\zipcodes_num_frV2.xls;Extended Properties="EXCEL 8.0;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
