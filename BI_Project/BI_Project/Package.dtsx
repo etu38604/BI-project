@@ -11,8 +11,8 @@
   DTS:LocaleID="2060"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="62"
-  DTS:VersionGUID="{834E7322-DCA2-4048-A084-704E0D3A435C}">
+  DTS:VersionBuild="67"
+  DTS:VersionGUID="{3E81F902-8D0D-4053-9315-54C00AAEA1C3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,7 +23,7 @@
       DTS:ObjectName="FichierExcelCodePostal">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\zipcodes_num_frV2.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Damien\Documents\info\IESN\Bloc3\BI\scholtes\Project\BI-project\srcs\zipcodes_num_frV2_old.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -33,7 +33,7 @@
       DTS:ObjectName="FichierExcelErreur">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\FichierErreur.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Damien\Documents\info\IESN\Bloc3\BI\scholtes\Project\BI-project\srcs\FichierErreur.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -43,7 +43,7 @@
       DTS:ObjectName="Gestionnaire de connexions Excel">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\zipcodes_num_frV2.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Damien\Documents\info\IESN\Bloc3\BI\scholtes\Project\BI-project\srcs\zipcodes_num_frV2_old.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -53,7 +53,7 @@
       DTS:ObjectName="Gestionnaire de connexions Excel 1">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Cours\B3\Business\Labo Scholtes\PROJET\BI-project\srcs\zipcodes_num_frV2.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Damien\Documents\info\IESN\Bloc3\BI\scholtes\Project\BI-project\srcs\zipcodes_num_frV2_old.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -67,7 +67,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6Rl/kUM2oE2O/CgcvdKEVAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADwA/YYuSKpuOto5InxkSPcQ0CBqKWBIsQ+6NRg2wAdbQAAAAAOgAAAAAIAACAAAADeXI0wH9GQ/c7+72gSQpkBjWou2KI6frGYPgng4/xAHCAAAABs7t7HzGO6x4mBr7nKw/njO0LPQh/oVBX2znqEzHuofUAAAAD3EQPxYDJrRkv2G07cqGcl0lZJkobHFve2pjKe4XpItx+rd1k1bOHk5NlvgI9cw1PZTE9ZzFL7SFlzXTOxR7uB</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAXWZtJr+GWECuMYAw/T3oGQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD+yiUiPUhyk/Lep53jXp1sl21nze+D34laxS+MVfJMtQAAAAAOgAAAAAIAACAAAAA4uZFuOzfg4phU8mvdTvcsyRD1Ir3auvrp0E12YP4pdyAAAABbtOMZXix/1TmXloeo5S5oR7dQ7b0KthTCOGUvRXyKPUAAAACOdxYJ2CLEdq6CEBffug6kVs08+3MK4zzGY0Pmiqn4Iejins4wdIByCmz9cPBA3MPtm+JmizWy0k+baVwrC35P</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -82,7 +82,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6Rl/kUM2oE2O/CgcvdKEVAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADlrwTanOJOVLTMRNMbf1FzJSRHHIWcNKYHgHe++zQmKwAAAAAOgAAAAAIAACAAAABz1G62HWxBC1UHDc+C83mCt034vFaOdo54wdzGJ8O2iyAAAAC1bqmMVXcL794OAlw8xnHvRiwFvyqUpFuMX08F3FwlXUAAAACbbWFbIpczRHTVx9PvIXeUIPIHe97ARt+vhJIZJ3BUCzf8t5vuoZsaKgBOLN7tn8RcKGID2BOgJ4ivYjAaPizo</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAXWZtJr+GWECuMYAw/T3oGQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABcaUidZfGIzhCv7+8zc2Nlo+2xpKuTrMWvGCV0+mTsHQAAAAAOgAAAAAIAACAAAAC0tjPmZdvRcM3LblXIDuG4r4MJzbMR4Z47o8Zl7pweaSAAAAD273ho+u4KBH7oOCzByE/LqynC252GxyWB//u4ZzbT7kAAAACZPcGErUyVx4TjfVugvxYUG2eIcyoRnW4PNQSLMFGOQWQDooy57zjj+2w7vFPU6+pdeTaXByClj+EW6/W7g32b</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1803,8 +1803,8 @@
               <connections>
                 <connection
                   refId="Package\Remplissage de DimCustomer\Source Excel.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Gestionnaire de connexions Excel]"
-                  connectionManagerRefId="Package.ConnectionManagers[Gestionnaire de connexions Excel]"
+                  connectionManagerID="Package.ConnectionManagers[FichierExcelCodePostal]"
+                  connectionManagerRefId="Package.ConnectionManagers[FichierExcelCodePostal]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -1813,6 +1813,15 @@
                   refId="Package\Remplissage de DimCustomer\Source Excel.Outputs[Sortie de source Excel]"
                   name="Sortie de source Excel">
                   <outputColumns>
+                    <outputColumn
+                      refId="Package\Remplissage de DimCustomer\Source Excel.Outputs[Sortie de source Excel].Columns[Code postal]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remplissage de DimCustomer\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Code postal]"
+                      lineageId="Package\Remplissage de DimCustomer\Source Excel.Outputs[Sortie de source Excel].Columns[Code postal]"
+                      name="Code postal"
+                      truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Remplissage de DimCustomer\Source Excel.Outputs[Sortie de source Excel].Columns[Province]"
                       dataType="wstr"
@@ -1823,18 +1832,17 @@
                       lineageId="Package\Remplissage de DimCustomer\Source Excel.Outputs[Sortie de source Excel].Columns[Province]"
                       name="Province"
                       truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Remplissage de DimCustomer\Source Excel.Outputs[Sortie de source Excel].Columns[Code postal]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Remplissage de DimCustomer\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Code postal]"
-                      lineageId="Package\Remplissage de DimCustomer\Source Excel.Outputs[Sortie de source Excel].Columns[Code postal]"
-                      name="Code postal"
-                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimCustomer\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[F1]"
+                      dataType="r8"
+                      name="F1" />
+                    <externalMetadataColumn
+                      refId="Package\Remplissage de DimCustomer\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Code postal]"
+                      dataType="r8"
+                      name="Code postal" />
                     <externalMetadataColumn
                       refId="Package\Remplissage de DimCustomer\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Localité]"
                       dataType="wstr"
@@ -1850,14 +1858,6 @@
                       dataType="wstr"
                       length="255"
                       name="Province" />
-                    <externalMetadataColumn
-                      refId="Package\Remplissage de DimCustomer\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[F1]"
-                      dataType="r8"
-                      name="F1" />
-                    <externalMetadataColumn
-                      refId="Package\Remplissage de DimCustomer\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Code postal]"
-                      dataType="r8"
-                      name="Code postal" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -13563,6 +13563,42 @@ where [refTable].[OriginalId] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="156,42"
+          Id="Package\Remplissage de DimCustomer\Recup Customer"
+          TopLeft="162,64" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Remplissage de DimCustomer\Destination OLE DB"
+          TopLeft="520,704" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Remplissage de DimCustomer\TrierParIdCodePostal"
+          TopLeft="632.75,395.5" />
+        <NodeLayout
+          Size="198,42"
+          Id="Package\Remplissage de DimCustomer\Conversion de données 1"
+          TopLeft="270,327.5" />
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Remplissage de DimCustomer\TrierIdEtatCivil"
+          TopLeft="397,180.75" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Remplissage de DimCustomer\Jointure de fusion 1"
+          TopLeft="518.75,522.5" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Remplissage de DimCustomer\TrierParEtatCivil"
+          TopLeft="168.25,177.25" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Remplissage de DimCustomer\TrierParCodePostal"
+          TopLeft="277.75,395.25" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Remplissage de DimCustomer\Conversion de données"
+          TopLeft="634,182" />
+        <NodeLayout
           Size="163,42"
           Id="Package\Remplissage de DimCustomer\Jointure de fusion"
           TopLeft="292.25,259.25" />
@@ -13571,55 +13607,69 @@ where [refTable].[OriginalId] = ?</property>
           Id="Package\Remplissage de DimCustomer\Recup statutCivil"
           TopLeft="393,65" />
         <NodeLayout
-          Size="156,42"
-          Id="Package\Remplissage de DimCustomer\Recup Customer"
-          TopLeft="162,64" />
-        <NodeLayout
-          Size="149,42"
-          Id="Package\Remplissage de DimCustomer\TrierIdEtatCivil"
-          TopLeft="397,180.75" />
-        <NodeLayout
-          Size="139,42"
-          Id="Package\Remplissage de DimCustomer\Source Excel"
-          TopLeft="659,64" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Remplissage de DimCustomer\Destination OLE DB"
-          TopLeft="520,704" />
-        <NodeLayout
-          Size="168,42"
-          Id="Package\Remplissage de DimCustomer\TrierParCodePostal"
-          TopLeft="277.75,395.25" />
-        <NodeLayout
-          Size="178,42"
-          Id="Package\Remplissage de DimCustomer\TrierParIdCodePostal"
-          TopLeft="632.75,395.5" />
-        <NodeLayout
-          Size="189,42"
-          Id="Package\Remplissage de DimCustomer\Conversion de données"
-          TopLeft="634,182" />
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Remplissage de DimCustomer\TrierParEtatCivil"
-          TopLeft="168.25,177.25" />
-        <NodeLayout
           Size="155,42"
           Id="Package\Remplissage de DimCustomer\Colonne dérivée"
           TopLeft="529,616" />
         <EdgeLayout
-          Id="Package\Remplissage de DimCustomer.Paths[Sortie de colonne dérivée]"
-          TopLeft="606,658">
+          Id="Package\Remplissage de DimCustomer.Paths[Sortie de tri3]"
+          TopLeft="721.75,437.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,46"
+              EndConnector="-89.6666666666666,84.9999999999999"
               Start="0,0"
-              End="0,38.5">
+              End="-89.6666666666666,77.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.5" />
+                    End="0,46.5299539170507" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46.5299539170507"
+                    Point2="0,50.5299539170507"
+                    Point3="-4,50.5299539170507" />
+                  <mssgle:LineSegment
+                    End="-85.6666666666666,50.5299539170507" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-85.6666666666666,50.5299539170507"
+                    Point2="-89.6666666666666,50.5299539170507"
+                    Point3="-89.6666666666666,54.5299539170507" />
+                  <mssgle:LineSegment
+                    End="-89.6666666666666,77.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Remplissage de DimCustomer.Paths[Sortie de tri2]"
+          TopLeft="361.75,437.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="215.666666666667,85.25"
+              Start="0,0"
+              End="215.666666666667,77.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.6785714285714" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46.6785714285714"
+                    Point2="0,50.6785714285714"
+                    Point3="4,50.6785714285714" />
+                  <mssgle:LineSegment
+                    End="211.666666666667,50.6785714285714" />
+                  <mssgle:CubicBezierSegment
+                    Point1="211.666666666667,50.6785714285714"
+                    Point2="215.666666666667,50.6785714285714"
+                    Point3="215.666666666667,54.6785714285714" />
+                  <mssgle:LineSegment
+                    End="215.666666666667,77.75" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13741,19 +13791,19 @@ where [refTable].[OriginalId] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Remplissage de DimCustomer.Paths[Sortie de source Excel]"
-          TopLeft="728.5,106">
+          Id="Package\Remplissage de DimCustomer.Paths[Sortie de jointure de fusion1]"
+          TopLeft="605.625,564.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,76"
+              EndConnector="0,51.5"
               Start="0,0"
-              End="0,68.5">
+              End="0,44">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,68.5" />
+                    End="0,44" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13762,32 +13812,6 @@ where [refTable].[OriginalId] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Remplissage de DimCustomer.Paths[Sortie de conversion de données]"
-          TopLeft="725.125,224">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,171.5"
-              Start="0,0"
-              End="0,164">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,164" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="198,42"
-          Id="Package\Remplissage de DimCustomer\Conversion de données 1"
-          TopLeft="270,327.5" />
         <EdgeLayout
           Id="Package\Remplissage de DimCustomer.Paths[Sortie de jointure de fusion]"
           TopLeft="371.375,301.25">
@@ -13832,92 +13856,80 @@ where [refTable].[OriginalId] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Remplissage de DimCustomer.Paths[Sortie de conversion de données]"
+          TopLeft="725.625,224">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,171.5"
+              Start="0,0"
+              End="0,164">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,164" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Remplissage de DimCustomer.Paths[Sortie de colonne dérivée]"
+          TopLeft="606,658">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <NodeLayout
-          Size="172,42"
-          Id="Package\Remplissage de DimCustomer\Jointure de fusion 1"
-          TopLeft="518.75,522.5" />
+          Size="141,42"
+          Id="Package\Remplissage de DimCustomer\Source Excel"
+          TopLeft="645,68" />
         <EdgeLayout
-          Id="Package\Remplissage de DimCustomer.Paths[Sortie de tri2]"
-          TopLeft="361.75,437.25">
+          Id="Package\Remplissage de DimCustomer.Paths[Sortie de source Excel]"
+          TopLeft="715.5,110">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="215.666666666667,85.25"
+              EndConnector="14,72"
               Start="0,0"
-              End="215.666666666667,77.75">
+              End="14,64.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,46.6785714285714" />
+                    End="0,32" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,46.6785714285714"
-                    Point2="0,50.6785714285714"
-                    Point3="4,50.6785714285714" />
+                    Point1="0,32"
+                    Point2="0,36"
+                    Point3="4,36" />
                   <mssgle:LineSegment
-                    End="211.666666666667,50.6785714285714" />
+                    End="10,36" />
                   <mssgle:CubicBezierSegment
-                    Point1="211.666666666667,50.6785714285714"
-                    Point2="215.666666666667,50.6785714285714"
-                    Point3="215.666666666667,54.6785714285714" />
+                    Point1="10,36"
+                    Point2="14,36"
+                    Point3="14,40" />
                   <mssgle:LineSegment
-                    End="215.666666666667,77.75" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Remplissage de DimCustomer.Paths[Sortie de tri3]"
-          TopLeft="721.75,437.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-89.6666666666666,84.9999999999999"
-              Start="0,0"
-              End="-89.6666666666666,77.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,46.5299539170507" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,46.5299539170507"
-                    Point2="0,50.5299539170507"
-                    Point3="-4,50.5299539170507" />
-                  <mssgle:LineSegment
-                    End="-85.6666666666666,50.5299539170507" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-85.6666666666666,50.5299539170507"
-                    Point2="-89.6666666666666,50.5299539170507"
-                    Point3="-89.6666666666666,54.5299539170507" />
-                  <mssgle:LineSegment
-                    End="-89.6666666666666,77.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Remplissage de DimCustomer.Paths[Sortie de jointure de fusion1]"
-          TopLeft="605.625,564.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,51.5"
-              Start="0,0"
-              End="0,44">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44" />
+                    End="14,64.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13943,33 +13955,20 @@ where [refTable].[OriginalId] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Remplissage de DimCustomer\Recup statutCivil">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Remplissage de DimCustomer\Source Excel">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Remplissage de DimCustomer\Destination OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Remplissage de DimCustomer\Recup statutCivil">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -13985,7 +13984,7 @@ where [refTable].[OriginalId] = ?</property>
     design-time-name="Package\Remplissage de DimDate">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="171,42"
           Id="Package\Remplissage de DimDate\Destination OLE DB"
@@ -14013,7 +14012,9 @@ where [refTable].[OriginalId] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -14044,15 +14045,15 @@ where [refTable].[OriginalId] = ?</property>
     design-time-name="Package\Remplissage de DimProduct">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="166,42"
           Id="Package\Remplissage de DimProduct\RecupDepartment"
           TopLeft="89,39" />
         <NodeLayout
-          Size="159,42"
-          Id="Package\Remplissage de DimProduct\TrierDepartment"
-          TopLeft="92,131" />
+          Size="160,42"
+          Id="Package\Remplissage de DimProduct\TrierParIdDepCat"
+          TopLeft="240,296" />
         <NodeLayout
           Size="174,42"
           Id="Package\Remplissage de DimProduct\Jointure de fusion 1"
@@ -14070,21 +14071,21 @@ where [refTable].[OriginalId] = ?</property>
           Id="Package\Remplissage de DimProduct\Jointure de fusion"
           TopLeft="240,207" />
         <NodeLayout
-          Size="160,42"
-          Id="Package\Remplissage de DimProduct\TrierParIdDepCat"
-          TopLeft="240,296" />
-        <NodeLayout
           Size="145,42"
           Id="Package\Remplissage de DimProduct\TrierCategory"
           TopLeft="385,130" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Remplissage de DimProduct\TrierProduct"
+          TopLeft="625,133" />
         <NodeLayout
           Size="155,42"
           Id="Package\Remplissage de DimProduct\Colonne dérivée"
           TopLeft="486,453" />
         <NodeLayout
-          Size="139,42"
-          Id="Package\Remplissage de DimProduct\TrierProduct"
-          TopLeft="625,133" />
+          Size="159,42"
+          Id="Package\Remplissage de DimProduct\TrierDepartment"
+          TopLeft="92,131" />
         <NodeLayout
           Size="152,42"
           Id="Package\Remplissage de DimProduct\RecupCategory"
@@ -14120,7 +14121,9 @@ where [refTable].[OriginalId] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14154,7 +14157,9 @@ where [refTable].[OriginalId] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14188,7 +14193,9 @@ where [refTable].[OriginalId] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14222,7 +14229,9 @@ where [refTable].[OriginalId] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14244,7 +14253,9 @@ where [refTable].[OriginalId] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14266,7 +14277,9 @@ where [refTable].[OriginalId] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14288,7 +14301,9 @@ where [refTable].[OriginalId] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14310,7 +14325,9 @@ where [refTable].[OriginalId] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14332,7 +14349,9 @@ where [refTable].[OriginalId] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14354,7 +14373,9 @@ where [refTable].[OriginalId] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -14418,10 +14439,6 @@ where [refTable].[OriginalId] = ?</property>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="134,42"
-          Id="Package\Remplissage de DimStore\TrierIDLoca"
-          TopLeft="524,182" />
-        <NodeLayout
           Size="147,42"
           Id="Package\Remplissage de DimStore\Recup Localite"
           TopLeft="522,10" />
@@ -14434,9 +14451,17 @@ where [refTable].[OriginalId] = ?</property>
           Id="Package\Remplissage de DimStore\Destination OLE DB"
           TopLeft="602,1025" />
         <NodeLayout
-          Size="164,42"
-          Id="Package\Remplissage de DimStore\TrierIDCodePostal"
-          TopLeft="776,666" />
+          Size="138,42"
+          Id="Package\Remplissage de DimStore\TrierParPays"
+          TopLeft="356,393" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Remplissage de DimStore\TrierParLocalité"
+          TopLeft="233,173" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Remplissage de DimStore\TrierParCodePostal"
+          TopLeft="460,613" />
         <NodeLayout
           Size="172,42"
           Id="Package\Remplissage de DimStore\Jointure de fusion 2"
@@ -14446,25 +14471,21 @@ where [refTable].[OriginalId] = ?</property>
           Id="Package\Remplissage de DimStore\Conversion de données 1"
           TopLeft="489,92" />
         <NodeLayout
-          Size="139,42"
-          Id="Package\Remplissage de DimStore\Source Excel"
-          TopLeft="787,476" />
+          Size="164,42"
+          Id="Package\Remplissage de DimStore\TrierIDCodePostal"
+          TopLeft="776,666" />
         <NodeLayout
-          Size="138,42"
-          Id="Package\Remplissage de DimStore\TrierParPays"
-          TopLeft="356,393" />
+          Size="134,42"
+          Id="Package\Remplissage de DimStore\TrierIDPays"
+          TopLeft="623,390" />
         <NodeLayout
-          Size="152,42"
-          Id="Package\Remplissage de DimStore\TrierParLocalité"
-          TopLeft="233,173" />
+          Size="134,42"
+          Id="Package\Remplissage de DimStore\TrierIDLoca"
+          TopLeft="524,182" />
         <NodeLayout
           Size="172,42"
           Id="Package\Remplissage de DimStore\Jointure de fusion 1"
           TopLeft="462,500" />
-        <NodeLayout
-          Size="168,42"
-          Id="Package\Remplissage de DimStore\TrierParCodePostal"
-          TopLeft="460,613" />
         <NodeLayout
           Size="189,42"
           Id="Package\Remplissage de DimStore\Conversion de données"
@@ -14481,10 +14502,6 @@ where [refTable].[OriginalId] = ?</property>
           Size="155,42"
           Id="Package\Remplissage de DimStore\Colonne dérivée"
           TopLeft="604,909" />
-        <NodeLayout
-          Size="134,42"
-          Id="Package\Remplissage de DimStore\TrierIDPays"
-          TopLeft="623,390" />
         <EdgeLayout
           Id="Package\Remplissage de DimStore.Paths[Sortie de tri5]"
           TopLeft="544,655">
@@ -14756,28 +14773,6 @@ where [refTable].[OriginalId] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Remplissage de DimStore.Paths[Sortie de source Excel]"
-          TopLeft="855,518">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52"
-              Start="0,0"
-              End="0,44.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Remplissage de DimStore.Paths[Sortie de jointure de fusion2]"
           TopLeft="684.25,849">
           <EdgeLayout.Curve>
@@ -14909,6 +14904,32 @@ where [refTable].[OriginalId] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Remplissage de DimStore\Source Excel"
+          TopLeft="787,476" />
+        <EdgeLayout
+          Id="Package\Remplissage de DimStore.Paths[Sortie de source Excel]"
+          TopLeft="855,518">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52"
+              Start="0,0"
+              End="0,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -14952,19 +14973,6 @@ where [refTable].[OriginalId] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Remplissage de DimStore\Source Excel">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Remplissage de DimStore\Recu Pays">
     <Properties>
       <Property>
@@ -14983,53 +14991,305 @@ where [refTable].[OriginalId] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="152,42"
-          Id="Package\Remplissage de Fact\TrierParRecette"
-          TopLeft="345,171" />
-        <NodeLayout
-          Size="153,42"
-          Id="Package\Remplissage de Fact\Recherche Date"
-          TopLeft="230,586" />
+          Size="159,42"
+          Id="Package\Remplissage de Fact\Destination Excel 2"
+          TopLeft="765,689" />
         <NodeLayout
           Size="146,42"
           Id="Package\Remplissage de Fact\TrierIdRecette"
           TopLeft="133,172" />
         <NodeLayout
-          Size="171,42"
-          Id="Package\Remplissage de Fact\Destination OLE DB"
-          TopLeft="218,1024" />
+          Size="153,42"
+          Id="Package\Remplissage de Fact\Recherche Date"
+          TopLeft="230,586" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Remplissage de Fact\Destination Excel 3"
+          TopLeft="758,803" />
         <NodeLayout
           Size="142,42"
           Id="Package\Remplissage de Fact\Recup Reciep"
           TopLeft="139,74" />
         <NodeLayout
+          Size="171,42"
+          Id="Package\Remplissage de Fact\Destination OLE DB"
+          TopLeft="218,1024" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Remplissage de Fact\Transformation date"
+          TopLeft="225,502" />
+        <NodeLayout
           Size="163,42"
           Id="Package\Remplissage de Fact\Jointure de fusion"
           TopLeft="232,285" />
-        <NodeLayout
-          Size="156,42"
-          Id="Package\Remplissage de Fact\Recherche Store"
-          TopLeft="226,692" />
         <NodeLayout
           Size="167,42"
           Id="Package\Remplissage de Fact\Recherche Product"
           TopLeft="223,397" />
         <NodeLayout
-          Size="164,42"
-          Id="Package\Remplissage de Fact\Colonne dérivée 1"
-          TopLeft="220,908" />
-        <NodeLayout
           Size="165,42"
           Id="Package\Remplissage de Fact\Recup RecieptLine"
           TopLeft="340,75" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Remplissage de Fact\Destination Excel"
+          TopLeft="761,400" />
         <NodeLayout
           Size="176,42"
           Id="Package\Remplissage de Fact\Recherche Customer"
           TopLeft="217,797" />
         <NodeLayout
-          Size="175,42"
-          Id="Package\Remplissage de Fact\Transformation date"
-          TopLeft="225,502" />
+          Size="159,42"
+          Id="Package\Remplissage de Fact\Destination Excel 1"
+          TopLeft="765,584" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Remplissage de Fact\Colonne dérivée 1"
+          TopLeft="220,908" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Remplissage de Fact\TrierParRecette"
+          TopLeft="345,171" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Remplissage de Fact\Recherche Store"
+          TopLeft="226,692" />
+        <EdgeLayout
+          Id="Package\Remplissage de Fact.Paths[Sortie de recherche sans correspondance3]"
+          TopLeft="393,821">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="365,0"
+              Start="0,0"
+              End="357.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="357.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="87.24798828125,5,183.0040234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Remplissage de Fact.Paths[Sortie de recherche sans correspondance2]"
+          TopLeft="382,711.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="383,0"
+              Start="0,0"
+              End="375.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="375.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="96.24798828125,5,183.0040234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Remplissage de Fact.Paths[Sortie de recherche sans correspondance1]"
+          TopLeft="383,606">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="382,0"
+              Start="0,0"
+              End="374.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="374.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="95.74798828125,5,183.0040234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Remplissage de Fact.Paths[Sortie de recherche sans correspondance]"
+          TopLeft="390,419.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="371,0"
+              Start="0,0"
+              End="363.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="363.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="90.24798828125,5,183.0040234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Remplissage de Fact.Paths[Sortie de recherche avec correspondance3]"
+          TopLeft="303.5,839">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,69"
+              Start="0,0"
+              End="0,61.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,61.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.67701171875,24.9453125,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Remplissage de Fact.Paths[Sortie de recherche avec correspondance2]"
+          TopLeft="304.5,734">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63"
+              Start="0,0"
+              End="0,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.67701171875,21.9453125,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Remplissage de Fact.Paths[Sortie de recherche avec correspondance1]"
+          TopLeft="305.25,628">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64"
+              Start="0,0"
+              End="0,56.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.67701171875,22.4453125,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Remplissage de Fact.Paths[Sortie de recherche avec correspondance]"
+          TopLeft="309.5,439">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63"
+              Start="0,0"
+              End="0,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.67701171875,21.9453125,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Remplissage de Fact.Paths[Sortie de jointure de fusion]"
+          TopLeft="310,327">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,70"
+              Start="0,0"
+              End="0,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Remplissage de Fact.Paths[Sortie de colonne dérivée1]"
+          TopLeft="302.75,950">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,74"
+              Start="0,0"
+              End="0,66.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,66.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Remplissage de Fact.Paths[Sortie de colonne dérivée]"
           TopLeft="309.5,544">
@@ -15164,268 +15424,29 @@ where [refTable].[OriginalId] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Remplissage de Fact.Paths[Sortie de recherche avec correspondance3]"
-          TopLeft="303.5,839">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,69"
-              Start="0,0"
-              End="0,61.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,61.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-91.67701171875,24.9453125,183.3540234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Remplissage de Fact.Paths[Sortie de recherche avec correspondance2]"
-          TopLeft="304.5,734">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,63"
-              Start="0,0"
-              End="0,55.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,55.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-91.67701171875,21.9453125,183.3540234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Remplissage de Fact.Paths[Sortie de recherche avec correspondance1]"
-          TopLeft="305.25,628">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,64"
-              Start="0,0"
-              End="0,56.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,56.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-91.67701171875,22.4453125,183.3540234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Remplissage de Fact.Paths[Sortie de recherche avec correspondance]"
-          TopLeft="309.5,439">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,63"
-              Start="0,0"
-              End="0,55.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,55.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-91.67701171875,21.9453125,183.3540234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Remplissage de Fact.Paths[Sortie de colonne dérivée1]"
-          TopLeft="302.75,950">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,74"
-              Start="0,0"
-              End="0,66.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,66.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Remplissage de Fact.Paths[Sortie de jointure de fusion]"
-          TopLeft="310,327">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,70"
-              Start="0,0"
-              End="0,62.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,62.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Remplissage de Fact\Destination Excel"
-          TopLeft="761,400" />
-        <EdgeLayout
-          Id="Package\Remplissage de Fact.Paths[Sortie de recherche sans correspondance]"
-          TopLeft="390,419.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="371,0"
-              Start="0,0"
-              End="363.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="363.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="90.24798828125,5,183.0040234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Remplissage de Fact\Destination Excel 1"
-          TopLeft="765,584" />
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Remplissage de Fact\Destination Excel 2"
-          TopLeft="765,689" />
-        <EdgeLayout
-          Id="Package\Remplissage de Fact.Paths[Sortie de recherche sans correspondance1]"
-          TopLeft="383,606">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="382,0"
-              Start="0,0"
-              End="374.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="374.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="95.74798828125,5,183.0040234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Remplissage de Fact.Paths[Sortie de recherche sans correspondance2]"
-          TopLeft="382,711.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="383,0"
-              Start="0,0"
-              End="375.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="375.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="96.24798828125,5,183.0040234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Remplissage de Fact\Destination Excel 3"
-          TopLeft="758,803" />
-        <EdgeLayout
-          Id="Package\Remplissage de Fact.Paths[Sortie de recherche sans correspondance3]"
-          TopLeft="393,821">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="365,0"
-              Start="0,0"
-              End="357.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="357.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="87.24798828125,5,183.0040234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Remplissage de Fact\Destination Excel 2">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Remplissage de Fact\Recherche Date">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -15443,6 +15464,19 @@ where [refTable].[OriginalId] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Remplissage de Fact\Destination Excel 3">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Remplissage de Fact\Recup Reciep">
     <Properties>
       <Property>
@@ -15456,40 +15490,30 @@ where [refTable].[OriginalId] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Remplissage de Fact\Recherche Customer">
+    design-time-name="Package\Remplissage de Fact\Destination OLE DB">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimCustomer]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Remplissage de Fact\Recherche Store">
+    design-time-name="Package\Remplissage de Fact\Recherche Product">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DimStore]</Value>
+          type="q3:string">[dbo].[DimProduct]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -15515,42 +15539,6 @@ where [refTable].[OriginalId] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Remplissage de Fact\Recherche Product">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimProduct]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Remplissage de Fact\Destination OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Remplissage de Fact\Destination Excel">
     <Properties>
       <Property>
@@ -15560,6 +15548,29 @@ where [refTable].[OriginalId] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Remplissage de Fact\Recherche Customer">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimCustomer]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -15577,20 +15588,30 @@ where [refTable].[OriginalId] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Remplissage de Fact\Destination Excel 2">
+    design-time-name="Package\Remplissage de Fact\Recherche Store">
     <Properties>
       <Property>
-        <Name>DataSourceViewID</Name>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimStore]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q2:string">Table</Value>
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Remplissage de Fact\Destination Excel 3">
+    design-time-name="Package\Remplissage de DimCustomer\Source Excel">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
